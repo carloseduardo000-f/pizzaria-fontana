@@ -617,7 +617,7 @@ $(document).ready(function () {
 										"_blank" // <- This is what makes it open in a new window.
 									);*/
 								} else {
-									window.location.href = obj.obrigado
+									window.location.href = 'obrigado.html'
 								}
 							}
 						}
