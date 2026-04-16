@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+<script>
+  window.pixelId = "69bf0bacb653a253c724b6c2";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Pedido - Fontana di Trevi</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/delivry.css">
+    <link rel="stylesheet" href="css/produto.css">
+    <link rel="stylesheet" href="css/carrinho.css">
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1378572110574212');
+fbq('track', 'PageView');
+</script>
+    <style>
+        /* Estilos para as opções de frete */
+        .shipping-options-container {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .shipping-option-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #fff;
+        }
+
+        .shipping-option-label:hover {
+            border-color: #EA1D2C;
+            background-color: #fff5f5;
+        }
+
+        .shipping-option-label input[type="radio"] {
+            accent-color: #EA1D2C;
+            transform: scale(1.2);
+            margin-right: 10px;
+        }
+
+        .shipping-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .shipping-title {
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .shipping-time {
+            font-size: 0.85rem;
+            color: #718096;
+        }
+
+        .shipping-price {
+            font-weight: 800;
+            color: #EA1D2C;
+        }
+
+        /* BOTÃO PIX */
+        .continue-button {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .continue-button i {
+            margin-left: 5px;
+            font-size: 1.1em;
+        }
+
+        /* 🔥 CORREÇÃO DEFINITIVA V3 - MARGEM NEGATIVA 🔥 */
+        /* Garante que o card pai prenda o conteúdo que vazar */
+        .payment-card {
+            overflow: hidden !important;
+        }
+
+        /* O truque da margem negativa */
+        .payment-card .payment-total {
+            /* Puxa o rodapé para fora, anulando o padding de 24px do card pai */
+            margin-left: -24px !important;
+            margin-right: -24px !important;
+            margin-bottom: -24px !important;
+            /* Encosta no fundo */
+
+            /* Adiciona padding interno de volta para o texto respirar */
+            padding: 16px 24px !important;
+
+            /* Força a largura total compensando as margens negativas */
+            width: calc(100% + 48px) !important;
+            background-color: #f8f9fa;
+            border-top: 1px solid #edf2f7;
+
+            /* Flexbox para alinhar os itens */
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Correção do display */
+        #confirm-address-btn {
+            display: none !important;
+        }
+
+        .final-product-list-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .final-product-image {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 12px;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .cart-section {
+                grid-column: 1 / -1;
+            }
+
+            #checkout-section {
+                grid-column: 1 / 2;
+            }
+
+            .summary-section {
+                grid-column: 2 / 3;
+                height: fit-content;
+                position: sticky;
+                top: 20px;
+            }
+
+            #pix-payment-section {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1257998399180325');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1257998399180325&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+    <script src="scripts/utms/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async=""
+        defer=""></script>
+    <script>
+        !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1378572110574212'); fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="tr?id=1378572110574212&ev=PageView&noscript=1"></noscript>
+</head>
+
+<body class="carrinho">
+
+    <header class="product-header">
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i></a>
+        <img src="images/fontana.png" alt="Logo Fontana di Trevi" class="header-logo">
+        <div style="width: 24px;"></div>
+    </header>
+
+    <main>
+        <h1 class="cart-title" style="grid-column: 1/-1;">Finalizar Pedido</h1>
+
+        <section class="cart-section option-group">
+            <div class="group-header">
+                <h2>Itens do Pedido</h2>
+            </div>
+        </section>
+
+        <section id="checkout-section" class="checkout-section option-group">
+            <div class="group-header">
+                <h2>📍 Onde vamos entregar?</h2>
+            </div>
+            <form id="checkout-form" class="checkout-form">
+                <div class="form-group"> <label for="nome">Nome Completo *</label> <input type="text" id="nome"
+                        name="nome" placeholder="Como podemos te chamar?" required=""> </div>
+                <div class="form-group"> <label for="whatsapp">WhatsApp *</label> <input type="tel" id="whatsapp"
+                        name="whatsapp" placeholder="(99) 99999-9999" required=""> </div>
+                <div class="form-group"> <label for="cep">CEP *</label> <input type="text" id="cep" name="cep"
+                        placeholder="00000-000" required=""> </div>
+                <div class="form-group-inline">
+                    <div class="form-group"> <label for="rua">Rua *</label> <input type="text" id="rua" name="rua"
+                            required=""> </div>
+                    <div class="form-group" style="flex: 0 0 80px;"> <label for="numero">Nº *</label> <input type="text"
+                            id="numero" name="numero" required=""> </div>
+                </div>
+                <div class="form-group"> <label for="bairro">Bairro *</label> <input type="text" id="bairro"
+                        name="bairro" required=""> </div>
+                <div class="form-group"> <label for="complemento">Complemento</label> <input type="text"
+                        id="complemento" name="complemento" placeholder="Apto, bloco, ponto de ref."> </div>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label>Tipo de Entrega *</label>
+                    <div class="shipping-options-container">
+                        <label class="shipping-option-label">
+                            <div style="display:flex; align-items:center;">
+                                <input type="radio" name="shipping-method" value="0" checked=""
+                                    onchange="atualizarTotalComFrete(0)">
+                                <div class="shipping-info"> <span class="shipping-title">Entrega Padrão</span> <span
+                                        class="shipping-time">30 - 50 min</span> </div>
+                            </div>
+                            <span class="shipping-price" style="color: green;">GRÁTIS</span>
+                        </label>
+                        <label class="shipping-option-label">
+                            <div style="display:flex; align-items:center;">
+                                <input type="radio" name="shipping-method" value="4.80"
+                                    onchange="atualizarTotalComFrete(4.80)">
+                                <div class="shipping-info"> <span class="shipping-title">Entrega Rápida ⚡</span> <span
+                                        class="shipping-time">15 - 25 min</span> </div>
+                            </div>
+                            <span class="shipping-price">R$ 4,80</span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="summary-section option-group">
+            <div class="group-header">
+                <h2>Resumo</h2>
+            </div>
+            <div class="summary-list">
+                <div class="summary-item"><span>Subtotal</span> <span>R$ 0,00</span></div>
+                <div class="summary-item"><span>Taxa de entrega</span> <span id="display-frete">Grátis</span></div>
+                <div class="summary-item total-row"><span>Total</span> <span class="total-price">R$ 0,00</span></div>
+            </div>
+            <div style="padding: 15px; display: none;" id="desktop-checkout-btn-wrapper">
+                <button id="btn-finalizar-desktop" class="continue-button" style="background-color: #00A44B;"> Pagar com
+                    PIX <i class="fas fa-qrcode"></i> </button>
+            </div>
+        </section>
+
+        <section id="pix-payment-section" style="display:none;">
+            <div class="pix-container-wrapper">
+
+                <section class="card payment-card">
+                    <img src="images/ifood-logo.png" alt="Aguardando Pagamento" class="payment-icon-top">
+                    <div class="trust-lite">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Entrega garantida pela logística do iFood</span>
+                    </div>
+
+                    <style>
+                        .trust-lite {
+                            background: #f8f9fa;
+                            border: 1px solid #e5e7eb;
+                            padding: 12px 14px;
+                            border-radius: 12px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            font-size: 0.85rem;
+                            color: #2d3748;
+                            margin-bottom: 18px;
+                            animation: fadeIn 0.3s ease;
+                        }
+
+                        .trust-lite i {
+                            color: #EA1D2C;
+                            font-size: 18px;
+                        }
+
+                        @keyframes fadeIn {
+                            from {
+                                opacity: 0;
+                                transform: translateY(6px);
+                            }
+
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+                    </style>
+
+                    <h2>Pedido aguardando pagamento</h2>
+                    <p class="subtitle">Copie e cole o código no app do seu banco</p>
+                    <div class="payment-timer">Tempo para pagar: <span id="pix-timer">05:00</span></div>
+                    <div id="pix-qrcode" class="qr-code-img"></div>
+                    <label for="pix-code-input">Código PIX (copia e cola)</label>
+                    <div class="pix-copy-wrapper">
+                        <input type="text" id="pix-code-input" value="..." readonly="">
+                        <button id="copy-pix-btn"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="payment-status">Status: <strong id="pix-status-text">waiting_payment</strong></div>
+
+                    <footer class="payment-total"><span>Total</span> <span class="total-price"
+                            id="pix-order-total-card1"></span> </footer>
+                </section>
+
+                <section class="card order-status-card">
+                    <div class="delivery-time"><strong>PREVISÃO DE ENTREGA</strong> <span
+                            id="delivery-estimate-time">--:--</span> </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="delivery-progress-bar"></div>
+                    </div>
+                    <div class="status-bar">
+                        <div class="status-icon"><i class="fas fa-utensils"></i></div>
+                        <span class="status-text">Aguardando pagamento...</span>
+                    </div>
+                    <footer class="order-id"> <i class="fas fa-clock"></i> Fontana di Trevi • Pedido #<span
+                            id="order-number-fixed">438</span> </footer>
+                </section>
+
+                <section class="card info-card">
+                    <header class="card-header">
+                        <h3>Dados de entrega</h3>
+                    </header>
+                    <div class="info-line"> <i class="fas fa-user"></i> <span id="pix-delivery-name">Nome</span> </div>
+                    <div class="info-line"> <i class="fas fa-phone"></i> <span id="pix-delivery-phone">Tel</span> </div>
+                    <div class="info-line"> <i class="fas fa-map-marker-alt"></i> <span
+                            id="pix-delivery-address">Endereço</span> </div>
+                </section>
+
+                <section class="card info-card">
+                    <header class="card-header">
+                        <h3>Detalhes do pedido</h3>
+                    </header>
+                    <div id="pix-order-items-list-container"></div>
+                    <footer class="order-total"> <span>Total</span> <span class="total-price"
+                            id="pix-order-total"></span> </footer>
+                </section>
+
+                <section class="card info-card">
+                    <header class="card-header">
+                        <h3>Como pagar?</h3>
+                    </header>
+                    <ol class="payment-steps">
+                        <li>Abra o app do seu banco</li>
+                        <li>Escolha pagar via PIX copia e cola</li>
+                        <li>Copie e cole o código acima</li>
+                        <li>Confirme as informações e finalize o pagamento</li>
+                    </ol>
+                </section>
+            </div>
+            <div style="height: 80px;"></div>
+        </section>
+    </main>
+
+    <footer class="sticky-footer cart-footer" id="mobile-footer">
+        <div class="cart-total-summary"> <span class="total-label">Total Final</span> <span class="total-amount">R$
+                0,00</span> </div>
+        <div class="footer-actions">
+            <button id="btn-finalizar-mobile" class="continue-button" style="background-color: #00A44B;"> Pagar com PIX
+                <i class="fas fa-qrcode"></i> </button>
+        </div>
+    </footer>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="npm/sweetalert2%4011"></script>
+    <script src="js/carrinho.js"></script>
+    <script src="js/carrinho-page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    
+
+</body>
+
+</html>

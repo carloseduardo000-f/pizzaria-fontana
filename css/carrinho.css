@@ -1,0 +1,1713 @@
+/* ======================================================
+    CSS FINAL E UNIFICADO PARA O CARRINHO
+    ====================================================== */
+
+/* --- ESTILOS GERAIS DA PÁGINA --- */
+body.carrinho {
+    background-color: #f7f8fa;
+    padding-bottom: 150px; /* Garante espaço para o footer fixo não cobrir conteúdo */
+}
+
+main {
+    padding: 0 16px;
+}
+
+.cart-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #2d3748;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/* CÓDIGO NOVO PARA SUBSTITUIR */
+.option-group {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px; /* Cantos arredondados */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Sombra suave */
+    padding: 16px 20px; /* 🔥 AQUI ESTÁ A MÁGICA: Adiciona respiro interno */
+    margin-bottom: 24px;
+    overflow: hidden; /* Garante que nada "vaze" para fora */
+}
+
+/* --- ESTILOS DOS ITENS ADICIONADOS --- */
+.cart-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item:last-of-type {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.item-details .item-price {
+    font-size: 1rem;
+    color: #718096;
+    margin-top: 4px;
+}
+
+/* --- ESTILO CORRETO DAS PÍLULAS DE OPÇÕES (Restaurado) --- */
+.item-options-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.item-options-list li {
+    background-color: #f3f4f6 !important; /* Fundo cinza claro */
+    border: 1px solid #e5e7eb !important;   /* Borda sutil */
+    color: #4b5563 !important;              /* Texto cinza-médio */
+    padding: 6px 12px !important;
+    border-radius: 50px !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+}
+
+/* --- ESTILO CORRETO DO BOTÃO "ADICIONAR MAIS ITENS" (Restaurado) --- */
+.add-more-items-button {
+    width: 100% !important;
+    padding: 14px !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    background-color: #fff !important;       /* Fundo branco */
+    color: #374151 !important;              /* Texto cinza-escuro */
+    border: 1px solid #d1d5db !important;   /* Borda cinza clara */
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+.add-more-items-button:hover {
+    background-color: #f9fafb !important;
+    border-color: #adb5bd !important;
+}
+
+
+/* ======================================================
+   🔥 CORREÇÃO PRINCIPAL: ALINHAMENTO DO RESUMO DE VALORES
+   ====================================================== */
+.summary-list {
+    padding: 16px 20px;
+}
+
+.summary-item {
+    display: flex !important;                 /* Transforma a linha em um container flexível */
+    justify-content: space-between !important; /* Empurra o texto para a esquerda e o valor para a direita */
+    align-items: center !important;          /* Alinha verticalmente no centro */
+    font-size: 1rem;
+    color: #4a5568;
+    padding: 12px 0 !important;
+}
+
+.summary-item span:last-child {
+    font-weight: 600;
+}
+
+.summary-item .select-shipping {
+    color: #3b82f6; /* Azul */
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.summary-item.total-row {
+    font-weight: 800 !important;
+    font-size: 1.1rem;
+    color: #2d3748;
+    border-top: 1px dashed #cbd5e0 !important;
+    margin-top: 8px !important;
+}
+
+.summary-item .total-price {
+    color: #00A44B !important; /* Verde do preço */
+}
+
+
+/* ======================================================
+    REGRAS DO FOOTER (FUNCIONAL)
+    ====================================================== */
+
+/* Estado inicial do footer da index.html: escondido. */
+.cart-footer {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    border-top: 1px solid #e2e8f0;
+    padding: 12px 16px;
+    box-sizing: border-box;
+}
+
+/* Mostra o footer especificamente na página do carrinho */
+body.carrinho .cart-footer {
+    display: flex !important;
+}
+
+/* --- ESTILOS DO FOOTER DA PÁGINA DO CARRINHO --- */
+.cart-total-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.cart-total-summary .total-label {
+    font-size: 0.85rem;
+    color: #718096;
+    font-weight: 700;
+}
+.cart-total-summary .total-amount {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #00A44B;
+}
+
+.footer-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.clear-cart-button {
+    background: none;
+    border: none;
+    color: #718096;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+.continue-button {
+    background-color: #6A1B9A;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* === Tipografia unificada (vence a cascata) === */
+:root{ --font-ui: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; }
+
+html, body, h1, h2, h3, h4, h5, h6, p, span, small, strong, em, button, input, textarea, select {
+  font-family: var(--font-ui) !important;
+}
+
+/* ======================================================
+   🔥 RESTAURAÇÃO DO FOOTER DA PÁGINA INICIAL
+   ====================================================== */
+
+/* Alvo: O container de texto e preço no footer da index.html */
+.cart-footer .cart-info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    line-height: 1.2 !important;
+}
+
+/* Alvo: O texto "Total" ou "Seu carrinho está vazio" */
+.cart-footer .cart-info p {
+    font-size: 0.85rem !important;
+    color: #718096 !important;
+    margin: 0 0 2px 0 !important;
+    padding: 0 !important;
+    font-weight: 700 !important;
+}
+
+/* Alvo: O valor em R$ */
+.cart-footer .cart-info strong {
+    font-size: 1.2rem !important;
+    font-weight: 800 !important;
+    color: #00A44B !important; /* Cor verde para o preço */
+}
+
+/* Alvo: O botão "Ver carrinho" */
+.cart-footer .btn-cart {
+    display: inline-block !important;
+    background-color: #6A1B9A !important; /* Vermelho da marca */
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 14px 28px !important;
+    border-radius: 8px !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    transition: background-color 0.2s !important;
+}
+
+.cart-footer .btn-cart:hover {
+    background-color: #c91925 !important; /* Vermelho mais escuro */
+}
+
+/* ======================================================
+   ESTILO DA SEÇÃO DE CHECKOUT (DADOS DE ENTREGA)
+   ====================================================== */
+
+.checkout-section .group-header {
+    margin-bottom: 20px;
+}
+
+.checkout-form .form-group {
+    margin-bottom: 16px;
+}
+
+.checkout-form label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #4a5568;
+    margin-bottom: 6px;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="tel"] {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.checkout-form input[type="text"]:focus,
+.checkout-form input[type="tel"]:focus {
+    outline: none;
+    border-color: #6A1B9A;
+    box-shadow: 0 0 0 3px rgba(234, 29, 44, 0.15);
+}
+
+.checkout-form .form-group small {
+    font-size: 0.8rem;
+    color: #718096;
+    margin-top: 4px;
+    display: block;
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 16px;
+}
+
+.form-group-inline .form-group {
+    flex: 1;
+}
+
+/* ======================================================
+   POLIMENTO VISUAL - ETAPA DE ENDEREÇO E POPUP DE ENTREGA
+   ====================================================== */
+
+/* Cabeçalho da seção de endereço */
+.checkout-section .group-header h2 {
+  font-size: 1.3rem;
+  color: #2d3748;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Campos do formulário */
+.checkout-form label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #4a5568;
+}
+
+.checkout-form input {
+  background-color: #f9fafb;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.checkout-form input:focus {
+  border-color: #6A1B9A;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Placeholder */
+.checkout-form input::placeholder {
+  color: #a0aec0;
+}
+
+/* Botão Confirmar Endereço */
+.confirm-address-button {
+  background-color: #6A1B9A;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 0 4px 14px rgba(234, 29, 44, 0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+.confirm-address-button:hover {
+  background-color: #c91925;
+  transform: translateY(-1px);
+}
+
+/* Popup refinado */
+.delivery-options-popup {
+  border-radius: 16px !important;
+  padding: 24px !important;
+  background: #fff !important;
+}
+
+.delivery-options-popup h2 {
+  font-size: 1.3rem !important;
+  font-weight: 800 !important;
+  color: #2d3748 !important;
+  margin-bottom: 18px !important;
+  text-align: center;
+}
+
+.delivery-option {
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.delivery-option:hover {
+  border-color: #6A1B9A;
+  background: #fff7f7;
+}
+
+.delivery-option.selected {
+  border-color: #6A1B9A;
+  background: #fff0f0;
+}
+
+.option-info i {
+  color: #6A1B9A;
+  font-size: 1.4rem;
+}
+
+.option-title {
+  font-weight: 800;
+  color: #2d3748;
+}
+
+.option-time {
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.option-price {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.option-price.gratis {
+  color: #00A44B;
+}
+
+.popup-total-section {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.btn-confirmar-frete {
+  background-color: #6A1B9A !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  border-radius: 8px !important;
+}
+
+.btn-cancelar-frete {
+  font-weight: 700 !important;
+  color: #718096 !important;
+}
+/* ======================================================
+   💎 VERSÃO FINAL - POLIMENTO VISUAL DO CHECKOUT
+   ====================================================== */
+
+/* Cabeçalho da seção de endereço */
+.checkout-section .group-header h2 {
+  font-size: 1.3rem;
+  color: #2d3748;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Campos do formulário */
+.checkout-form label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #4a5568;
+}
+
+.checkout-form input {
+  background-color: #f9fafb;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.checkout-form input:focus {
+  border-color: #6A1B9A;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(234, 29, 44, 0.15);
+  outline: none;
+}
+
+/* Placeholder */
+.checkout-form input::placeholder {
+  color: #a0aec0;
+}
+
+/* Botão Confirmar Endereço */
+.confirm-address-button {
+  background-color: #6A1B9A;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 0 4px 14px rgba(234, 29, 44, 0.25);
+  transition: all 0.2s ease-in-out;
+  margin-top: 20px;
+}
+
+.confirm-address-button:hover {
+  background-color: #c91925;
+  transform: translateY(-1px);
+}
+
+/* === POPUP DE ENTREGA === */
+.delivery-options-popup {
+  border-radius: 18px !important;
+  padding: 28px !important;
+  background: #fff !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.delivery-options-popup h2 {
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
+  color: #2d3748 !important;
+  margin-bottom: 18px !important;
+  text-align: center;
+}
+
+.delivery-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.delivery-option {
+  background: #fff;
+  border: 1.6px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.delivery-option:hover {
+  border-color: #6A1B9A;
+  background: #fff7f7;
+}
+
+.delivery-option.selected {
+  border-color: #6A1B9A;
+  background: #fff0f0;
+  box-shadow: 0 0 0 3px rgba(234, 29, 44, 0.12);
+}
+
+.option-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.option-info i {
+  color: #6A1B9A;
+  font-size: 1.4rem;
+}
+
+.option-title {
+  font-weight: 800;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+.option-time {
+  font-size: 0.85rem;
+  color: #718096;
+  font-weight: 600;
+}
+
+.option-price {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #2d3748;
+}
+
+.option-price.gratis {
+  color: #00A44B;
+}
+
+/* Total do pedido dentro do popup */
+.popup-total-section {
+  margin-top: 22px;
+  text-align: center;
+  font-weight: 700;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+/* Botões do popup */
+.btn-confirmar-frete {
+  background-color: #6A1B9A !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  border-radius: 8px !important;
+  padding: 10px 26px !important;
+}
+
+.btn-cancelar-frete {
+  font-weight: 700 !important;
+  color: #718096 !important;
+  font-size: 1rem !important;
+}
+/* ======================================================
+   💎 POLIMENTO VISUAL - POPUP DE OPÇÕES DE ENTREGA
+   ====================================================== */
+
+.delivery-options-popup {
+    border-radius: 18px !important;
+    padding: 24px !important; /* Reduz padding para caber melhor */
+    background: #fff !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.delivery-options-popup h2 {
+    font-size: 1.25rem !important; /* Título um pouco menor */
+    font-weight: 800 !important;
+    color: #2d3748 !important;
+    margin-bottom: 18px !important;
+    text-align: center;
+}
+
+.delivery-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px !important; /* Menos espaço entre as opções */
+    margin-top: 10px;
+    margin-bottom: 20px !important;
+}
+
+.delivery-option {
+    background: #fff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px !important; /* Menos arredondado */
+    padding: 12px 16px !important; /* Menos padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.delivery-option:hover {
+    border-color: #6A1B9A !important;
+    background: #fff7f7 !important;
+}
+
+.delivery-option.selected {
+    border-color: #6A1B9A !important;
+    background: #fff0f0 !important;
+    box-shadow: 0 0 0 2px rgba(234, 29, 44, 0.1) !important; /* Efeito de seleção mais sutil */
+}
+
+.option-info {
+    display: flex;
+    align-items: center;
+    gap: 10px !important;
+}
+
+.option-info i {
+    color: #6A1B9A !important;
+    font-size: 1.2rem !important; /* Ícone menor */
+    width: 20px;
+    text-align: center;
+}
+
+.option-title {
+    font-weight: 700 !important; /* Título da opção mais leve */
+    color: #2d3748;
+    font-size: 0.9rem !important;
+}
+
+.option-time {
+    font-size: 0.75rem !important; /* Tempo menor */
+    color: #718096;
+    font-weight: 500 !important;
+}
+
+.option-price {
+    font-weight: 700 !important; /* Preço mais leve */
+    font-size: 0.9rem !important;
+    color: #ef8300;
+}
+
+.option-price.gratis {
+    color: #00A44B !important;
+    font-weight: 700 !important;
+}
+
+.popup-total-section {
+    margin-top: 18px !important;
+    text-align: center;
+    font-weight: 600 !important;
+    color: #4a5568;
+    font-size: 0.95rem !important;
+    border-top: 1px dashed #ccc !important;
+    padding-top: 14px !important;
+    margin-bottom: 8px !important;
+}
+.popup-total-section strong {
+    color: #00A44B !important;
+    font-weight: 800 !important;
+}
+
+/* Botões do popup */
+.swal2-confirm.btn-confirmar-frete {
+    background-color: #6A1B9A !important;
+    font-weight: 700 !important; /* Peso correto */
+    font-size: 0.9rem !important; /* Menor */
+    border-radius: 8px !important;
+    padding: 10px 20px !important; /* Menor */
+}
+
+.swal2-cancel.btn-cancelar-frete {
+    font-weight: 600 !important;
+    color: #718096 !important;
+    font-size: 0.9rem !important; /* Menor */
+     padding: 10px 20px !important; /* Menor */
+     border-radius: 8px !important;
+}
+/* ======================================================
+   💎 REFINAMENTO FINAL - POPUP DE OPÇÕES DE ENTREGA
+   ====================================================== */
+
+/* Alinha o texto das opções à esquerda */
+.delivery-option .option-text {
+    text-align: left !important;
+}
+
+/* Estilo para o texto de instrução */
+.popup-instruction-text {
+    font-size: 0.85rem !important;
+    color: #718096 !important;
+    text-align: center !important;
+    margin-top: -10px !important; /* Puxa um pouco para cima */
+    margin-bottom: 20px !important;
+}
+
+/* Container dos botões do popup (Confirmar/Cancelar) */
+.delivery-options-popup .swal2-actions {
+    justify-content: flex-end !important; /* Alinha os botões à direita */
+    gap: 10px !important; /* Espaço entre os botões */
+}
+
+/* Estilo do botão Confirmar quando desabilitado */
+.swal2-confirm.swal2-confirm:disabled {
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
+    background-color: #6A1B9A !important; /* Mantém a cor, mas com opacidade */
+}
+
+/* Ajuste fino no botão Cancelar para combinar */
+.swal2-cancel.btn-cancelar-frete {
+    background-color: #f3f4f6 !important; /* Fundo cinza claro */
+    color: #4b5563 !important; /* Texto cinza escuro */
+    border: 1px solid #d1d5db !important;
+}
+.swal2-cancel.btn-cancelar-frete:hover {
+    background-color: #e5e7eb !important; /* Cinza um pouco mais escuro no hover */
+}
+/* ======================================================
+   💎 AJUSTE FINAL - POSIÇÃO DOS BOTÕES NO POPUP
+   ====================================================== */
+
+/* Inverte a ordem visual dos botões (Confirmar vai para a direita) */
+.delivery-options-popup .swal2-actions {
+    flex-direction: row-reverse !important; /* A mágica acontece aqui */
+}
+/* ======================================================
+   💎 POPUP PREMIUM FINAL - FORMA DE PAGAMENTO
+   ====================================================== */
+
+/* --- Container externo do SweetAlert --- */
+.swal2-container.swal2-center {
+  backdrop-filter: blur(10px) saturate(110%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(110%) !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+}
+
+/* --- Estilo principal do popup --- */
+.payment-popup-modal {
+  border-radius: 18px !important;
+  padding: 26px 22px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12) !important;
+  max-width: 420px !important;
+  animation: slideUpFade 0.35s ease-out both !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* --- Animação de entrada --- */
+@keyframes slideUpFade {
+  0% { opacity: 0; transform: translateY(25px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* --- Título e subtítulo --- */
+.payment-popup .swal2-title {
+  font-family: 'Nunito Sans', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 1.35rem !important;
+  color: #2d3748 !important;
+  margin-bottom: 8px !important;
+  text-align: center;
+}
+
+.payment-popup .payment-subtitle {
+  font-size: 0.9rem !important;
+  color: #718096 !important;
+  text-align: center;
+  margin-bottom: 22px !important;
+  font-weight: 500 !important;
+}
+
+/* --- Seções de pagamento --- */
+.payment-section {
+  margin-bottom: 20px;
+}
+
+.payment-section h3 {
+  font-size: 0.75rem !important;
+  color: #a0aec0 !important;
+  font-weight: 700 !important;
+  margin-bottom: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  text-align: center;
+}
+
+/* --- Opções de pagamento (cards) --- */
+.payment-option {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  background: #fff !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer;
+}
+
+.payment-option:not(.disabled):hover {
+  border-color: #fca5a5 !important;
+  background-color: #fff8f8 !important;
+  transform: translateY(-1px);
+}
+
+.payment-option.active {
+  border-color: #6A1B9A !important;
+  background-color: #fff0f0 !important;
+  box-shadow: 0 0 0 3px rgba(234, 29, 44, 0.12) !important;
+  transform: scale(1.02);
+}
+
+/* --- Desativados --- */
+.payment-option.disabled {
+  opacity: 0.55 !important;
+  cursor: not-allowed !important;
+  background: #f8f8f8 !important;
+}
+
+/* --- Conteúdo das opções --- */
+.payment-info {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.payment-info i {
+  color: #6A1B9A !important;
+  font-size: 1.3rem !important;
+  width: 24px;
+  text-align: center;
+}
+
+.payment-title {
+  font-weight: 700 !important;
+  color: #2d3748 !important;
+  font-size: 0.95rem !important;
+}
+
+.payment-description {
+  font-size: 0.8rem !important;
+  color: #718096 !important;
+  margin-top: 2px !important;
+}
+
+/* --- Total do Pedido --- */
+.payment-total {
+  text-align: center;
+  margin-top: 22px !important;
+  font-weight: 700 !important;
+  color: #2d3748 !important;
+  font-size: 1rem !important;
+  padding-top: 14px !important;
+  border-top: 1px dashed #e2e8f0 !important;
+}
+
+.payment-total strong {
+  color: #00A859 !important;
+  font-size: 1.05rem !important;
+  letter-spacing: 0.3px !important;
+}
+
+/* --- Botões --- */
+.payment-popup .swal2-actions {
+  margin-top: 26px !important;
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+.btn-confirmar-pagamento {
+  background-color: #6A1B9A !important;
+  color: #fff !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  border-radius: 10px !important;
+  padding: 12px 28px !important;
+  width: 100% !important;
+  box-shadow: 0 5px 16px rgba(234, 29, 44, 0.25) !important;
+  transition: all 0.25s ease-in-out !important;
+}
+
+.btn-confirmar-pagamento:hover {
+  background-color: #c91925 !important;
+  transform: translateY(-1px);
+}
+
+.btn-confirmar-pagamento:active {
+  transform: scale(0.98);
+}
+
+.btn-voltar-pagamento,
+.payment-popup-modal .swal2-cancel {
+  display: none !important;
+}
+
+/* --- Remove focus padrão feio --- */
+.swal2-styled:focus {
+  box-shadow: none !important;
+}
+/* ======================================================
+   💎 ALINHAMENTO PREMIUM - OPÇÕES DE PAGAMENTO À ESQUERDA
+   ====================================================== */
+
+/* Faz o texto dentro das opções ficar à esquerda */
+.payment-option {
+  justify-content: flex-start !important;
+  gap: 14px !important;
+}
+
+/* Agrupa ícone e textos lado a lado */
+.payment-info {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  flex: 1 !important;
+}
+
+/* Textos alinhados à esquerda */
+.payment-info .option-text,
+.payment-info .payment-title,
+.payment-info .payment-description {
+  text-align: left !important;
+  align-items: flex-start !important;
+}
+
+/* Corrige o alinhamento do ícone */
+.payment-info i {
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+}
+
+/* Mantém o preço (ou status) fixo à direita */
+.payment-option > .option-price,
+.payment-option > .payment-status {
+  margin-left: auto !important;
+  text-align: right !important;
+}
+/* ======================================================
+   ✨ ESTILO DA TELA DE PAGAMENTO PIX
+   ====================================================== */
+
+/* Oculta o conteúdo antigo e aplica o fundo cinza */
+#pix-payment-section {
+    display: none; /* O JS controla a exibição */
+    background-color: #f4f4f4;
+    padding: 20px 10px;
+    margin: 0 -16px; /* Compensa o padding do <main> */
+}
+
+/* Container para os cards */
+.pix-container-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estrutura de Card Genérica (para esta seção) */
+#pix-payment-section .card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+/* --- CARD 1: Pagamento PIX --- */
+#pix-payment-section .payment-card {
+    padding: 24px;
+    text-align: center;
+}
+/* Ícone do topo - versão logo iFood */
+#pix-payment-section .payment-card .payment-icon-top {
+    display: block;
+    max-width: 110px;   /* ajusta o tamanho máximo da logo */
+    width: 100%;
+    height: auto;       /* mantém proporção correta */
+    margin: 0 auto 16px;
+    border-radius: 0;   /* remove o círculo que estava cortando */
+}
+
+#pix-payment-section .payment-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 0 8px;
+}
+#pix-payment-section .payment-card .subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin: 0 0 16px;
+}
+#pix-payment-section .payment-card .payment-timer {
+    font-size: 1rem;
+    color: #d90000;
+    margin-bottom: 16px;
+}
+#pix-payment-section .payment-card .payment-timer span {
+    font-weight: bold;
+}
+#pix-payment-section .payment-card .qr-code-img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 16px;
+    display: block;
+    border: 1px solid #eee;
+}
+#pix-payment-section .payment-card label {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+#pix-payment-section .pix-copy-wrapper {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+#pix-payment-section .pix-copy-wrapper input {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    font-size: 0.9rem;
+    color: #333;
+    background-color: #f9f9f9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#pix-payment-section .pix-copy-wrapper button {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 0 16px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #555;
+}
+#pix-payment-section .pix-copy-wrapper button:hover {
+    background-color: #e0e0e0;
+}
+#pix-payment-section .payment-card .pix-instructions {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 16px;
+}
+#pix-payment-section .payment-card .payment-status {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 24px;
+}
+#pix-payment-section .payment-card .payment-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+    margin: 0 -24px -24px;
+    padding: 16px 24px;
+}
+#pix-payment-section .payment-card .payment-total span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+#pix-payment-section .payment-card .total-price {
+    color: #00A44B; /* Verde do preço */
+    font-size: 1.3rem;
+}
+
+/* --- CARD 2: Status do Pedido (Escuro) --- */
+#pix-payment-section .order-status-card {
+    background-color: #2C2C2C; /* Cor escura */
+    color: white;
+    padding: 16px;
+}
+#pix-payment-section .order-status-card .delivery-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+/* 🔥 CORREÇÃO DE COR */
+#pix-payment-section .order-status-card .delivery-time strong {
+    font-size: 0.9rem;
+    color: #2DD4BF; /* Cor Ciano/Azul da referência */
+}
+#pix-payment-section .order-status-card .delivery-time span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #FFFFFF; /* Cor Branca */
+}
+/* Barra de progresso */
+#pix-payment-section .order-status-card .progress-bar-container {
+    width: 100%;
+    height: 6px;
+    background-color: #555; /* Trilho escuro */
+    border-radius: 3px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+#pix-payment-section .order-status-card .progress-bar-fill {
+    width: 100%; /* Começa em 100% */
+    height: 100%;
+    background-color: #28a745; /* Verde */
+    border-radius: 3px;
+    transition: width 1s linear; /* Anima a mudança de largura */
+}
+#pix-payment-section .order-status-card .status-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+    padding: 16px 0;
+    margin-bottom: 16px;
+}
+#pix-payment-section .order-status-card .status-icon {
+    font-size: 1.2rem;
+    color: #fff; 
+}
+/* Ícone de hambúrguer */
+#pix-payment-section .order-status-card .status-icon i.fa-burger {
+    font-size: 1.4rem;
+    color: #fff;
+}
+#pix-payment-section .order-status-card .status-text {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white; 
+}
+/* 3 pontinhos animados */
+@keyframes wave {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-4px); }
+}
+#pix-payment-section .order-status-card .options-menu {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+#pix-payment-section .order-status-card .animated-dots {
+    display: flex;
+    gap: 4px;
+    padding: 10px; /* Aumenta área de clique */
+}
+#pix-payment-section .order-status-card .animated-dots span {
+    width: 5px;
+    height: 5px;
+    background-color: #2DD4BF; /* 🔥 CORREÇÃO DE COR (Ciano/Azul) */
+    border-radius: 50%;
+    display: inline-block;
+    animation: wave 1.4s infinite;
+}
+#pix-payment-section .order-status-card .animated-dots span:nth-child(1) { animation-delay: 0s; }
+#pix-payment-section .order-status-card .animated-dots span:nth-child(2) { animation-delay: 0.2s; }
+#pix-payment-section .order-status-card .animated-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+
+#pix-payment-section .order-status-card .order-id {
+    font-size: 0.9rem;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- CARD 3, 4, 5: Cards de Informação --- */
+#pix-payment-section .info-card {
+    padding: 16px;
+}
+#pix-payment-section .info-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+}
+#pix-payment-section .info-card .card-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+#pix-payment-section .info-card .edit-link {
+    font-size: 0.9rem;
+    color: #d90000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Card 3: Dados de Entrega */
+#pix-payment-section .info-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+#pix-payment-section .info-line i {
+    color: #777;
+    margin-top: 4px;
+}
+#pix-payment-section .info-line:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+/* Card 4: Detalhes do Pedido (Estilo dos itens) */
+#pix-payment-section .order-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+#pix-payment-section .order-item .item-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+#pix-payment-section .order-item .item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+#pix-payment-section .order-item .item-details strong {
+    font-size: 1rem;
+    color: #333;
+}
+#pix-payment-section .order-item .item-details span {
+    font-size: 0.9rem;
+    color: #777;
+}
+#pix-payment-section .order-item .item-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+#pix-payment-section .order-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+#pix-payment-section .order-total span {
+    font-size: 1rem;
+    color: #555;
+}
+#pix-payment-section .order-total .total-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00A44B; /* Verde */
+}
+
+/* Card 5: Como Pagar */
+#pix-payment-section .payment-steps {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+#pix-payment-section .payment-steps li {
+    font-size: 0.9rem;
+    color: #555;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+#pix-payment-section .payment-steps li::before {
+    content: counter(list-item);
+    counter-increment: list-item;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fce8e6;
+    color: #d90000;
+    font-weight: bold;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* === FIX DEFINITIVO: cartões do popup de pagamento não esticam === */
+.payment-popup .swal2-html-container{
+  display:block !important;
+  width:100% !important;
+  padding:0 !important;
+}
+
+/* a lista de opções é apenas uma coluna normal, sem flex-grow */
+.payment-popup .payment-section{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:stretch !important;
+  gap:12px !important;
+  flex:0 0 auto !important;
+}
+
+/* cada opção é um “card” baixo, horizontal e sem crescer */
+.payment-popup .payment-option{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  gap:12px !important;
+
+  box-sizing:border-box !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:64px !important;        /* altura confortável */
+  max-height:96px !important;         /* evita virar “arranha-céu” */
+  padding:12px 16px !important;
+  border:1.5px solid #e2e8f0 !important;
+  border-radius:12px !important;
+  background:#fff !important;
+  overflow:hidden !important;
+
+  flex:0 0 auto !important;           /* NUNCA crescer dentro do container */
+}
+
+/* bloco com ícone + textos ocupa o espaço, mas pode encolher sem quebrar linhas */
+.payment-popup .payment-option .payment-info{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  gap:12px !important;
+  flex:1 1 auto !important;
+  min-width:0 !important;             /* impede “coluna” vertical (P I X) */
+}
+
+/* título e descrição permanecem em linha */
+.payment-popup .payment-title,
+.payment-popup .payment-description{
+  white-space:nowrap !important;
+  line-height:1.2 !important;
+}
+
+/* reforço: nenhum filho do card ganha flex-grow por acidente */
+.payment-popup .payment-option > *{
+  flex:0 0 auto !important;
+}
+/* ==============================================
+   ESTILOS (VERSÃO 2) - COM MAIOR ESPECIFICIDADE
+   ============================================== */
+
+/* Usando seletores mais fortes e !important 
+   para garantir que este CSS ganhe do seu CSS antigo. 
+*/
+
+section.card.order-status-card {
+    background-color: #0F172A !important; 
+    border-radius: 12px !important;
+    padding: 20px !important;
+    color: #FFFFFF !important;
+    font-family: Arial, sans-serif;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 2. O footer (Resolvendo o fundo branco) */
+section.card.order-status-card .order-id {
+    background-color: transparent !important; /* GARANTE que não terá fundo branco */
+    color: #8F95A3 !important; 
+    margin-top: 16px !important;
+    padding-top: 16px !important;
+    border-top: 1px solid #1B2234 !important; /* Linha divisória sutil */
+    font-size: 0.9em !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+section.card.order-status-card .order-id i {
+    color: #8F95A3 !important; 
+    margin-right: 8px !important;
+}
+
+/* 3. Seção "Previsão de Entrega" (Corrigindo a cor) */
+section.card.order-status-card .delivery-time {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 12px !important; /* Espaço para a barra de progresso */
+}
+
+section.card.order-status-card .delivery-time strong {
+    color: #969999 !important; /* Cinza da referência */
+    font-weight: 700 !important;
+    font-size: 0.85em !important;
+    letter-spacing: 0.5px !important;
+}
+
+section.card.order-status-card .delivery-time #delivery-estimate-time {
+    color: #FFFFFF !important; 
+    font-weight: 700 !important;
+    font-size: 1.2em !important;
+}
+
+/* 4. Barra de Progresso (FORÇANDO APARECER) */
+section.card.order-status-card .progress-bar-container {
+    display: block !important; /* Força a barra a aparecer */
+    visibility: visible !important; /* Garante que está visível */
+    background-color: #1B2234 !important; 
+    height: 8px !important; 
+    border-radius: 4px !important;
+    overflow: hidden !important; 
+    margin-bottom: 16px !important; /* Espaço antes do status */
+}
+
+section.card.order-status-card .progress-bar-fill {
+    background-color: #0FB782 !important; 
+    height: 100% !important;
+    width: 30%; /* Defina um valor de teste ou controle via JS */
+    border-radius: 4px !important;
+}
+
+/* 5. Barra de Status (Aguardando pagamento...) */
+section.card.order-status-card .status-bar {
+    background-color: #1B2234 !important; 
+    border-radius: 10px !important;
+    padding: 14px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+section.card.order-status-card .status-icon {
+    background-color: #303548 !important;
+    border-radius: 8px !important;
+    padding: 10px 12px !important;
+    margin-right: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+section.card.order-status-card .status-icon i {
+    color: #FFFFFF !important;
+    font-size: 1.1em !important;
+}
+
+section.card.order-status-card .status-text {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    flex-grow: 1 !important;
+}
+
+/* 6. Os três pontinhos "..." */
+section.card.order-status-card .animated-dots {
+    display: flex !important;
+    align-items: center !important;
+}
+
+section.card.order-status-card .animated-dots span {
+    background-color: #0FB782 !important; 
+    width: 5px !important;
+    height: 5px !important;
+    border-radius: 50% !important;
+    margin-left: 4px !important; 
+    animation: none !important; 
+}
+/* ==============================================
+   AJUSTES FINAIS E ANIMAÇÃO DOS PONTINHOS
+   ============================================== */
+
+/* 1. Restaurar a animação dos três pontinhos */
+section.card.order-status-card .animated-dots span {
+    /* Removendo o 'animation: none !important;' da versão anterior */
+    animation: dots-pulse 1.4s infinite ease-in-out both !important;
+}
+
+section.card.order-status-card .animated-dots span:nth-child(1) {
+    animation-delay: -0.32s !important;
+}
+
+section.card.order-status-card .animated-dots span:nth-child(2) {
+    animation-delay: -0.16s !important;
+}
+
+@keyframes dots-pulse {
+  0%, 80%, 100% {
+    transform: scale(0.6); /* Ajustado para um scale inicial mais sutil */
+    opacity: 0.6;
+  } 40% {
+    transform: scale(1.0);
+    opacity: 1;
+  }
+}
+
+/* 2. Pequeno ajuste no ícone do hambúrguer para centralizar melhor */
+section.card.order-status-card .status-icon i {
+    font-size: 1em !important; /* Um pouco menor, se parecer muito grande */
+    line-height: 1; /* Garante que o ícone fique centralizado verticalmente */
+    display: block !important; /* Para que line-height funcione bem */
+}
+
+/* Se você notar que o ícone ainda não está perfeitamente centralizado
+   dentro do seu quadrado cinza, experimente ajustar o padding do .status-icon */
+section.card.order-status-card .status-icon {
+    padding: 10px !important; /* Exemplo: padding mais uniforme em todas as direções */
+}
+/* ============================================= */
+/* ESTILOS PARA POPUP DE FORMA DE PAGAMENTO (V3) */
+/* Foco em responsividade e visual mais limpo   */
+/* ============================================= */
+
+/* 1. Controla a LARGURA do Popup em telas menores */
+.payment-popup-modal.swal2-popup {
+    max-width: 480px !important; /* Limita a largura máxima */
+    width: 90% !important;       /* Usa 90% da largura da tela */
+    border-radius: 16px !important; /* Mantém bordas arredondadas */
+}
+
+/* 2. Ajustes gerais dentro do popup */
+.payment-popup-modal #swal2-html-container .payment-popup {
+    text-align: left;
+    padding: 5px 5px 15px 5px; /* Padding interno sutil */
+}
+
+.payment-popup-modal .payment-subtitle {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.payment-popup-modal .payment-section {
+    margin-bottom: 25px;
+}
+
+.payment-popup-modal .payment-section h3 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+/* 3. Estiliza as OPÇÕES como caixas (similar ao popup de entrega) */
+.payment-popup-modal .payment-option {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; <= Removido para texto ficar junto ao ícone */
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 18px; /* Padding interno da caixa */
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    gap: 16px; /* Espaço entre ícone e bloco de texto */
+}
+
+/* Hover suave */
+.payment-popup-modal .payment-option:not(.disabled):hover {
+    border-color: #6A1B9A; /* Cor Fontana di Trevi */
+    background-color: #fff8f8;
+}
+
+/* Opção Ativa (PIX) */
+.payment-popup-modal .payment-option.active {
+    border: 2px solid #6A1B9A;
+    background-color: #fff8f8;
+    /* box-shadow: 0 0 0 3px rgba(185, 0, 0, 0.1); <= Removido para visual mais limpo */
+    padding: 15px 17px; /* Ajusta padding por causa da borda mais grossa */
+}
+
+/* Informações (Ícone + Textos) */
+.payment-popup-modal .payment-info {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Mantém o gap definido no .payment-option */
+}
+
+/* Ícones */
+.payment-popup-modal .payment-info i {
+    font-size: 1.7em; /* Levemente menor */
+    color: #6A1B9A; /* Cor Fontana di Trevi */
+    width: 28px;    /* Largura fixa */
+    text-align: center;
+    flex-shrink: 0; /* Impede que o ícone encolha */
+}
+
+/* Bloco de Texto (Título + Descrição) */
+.payment-popup-modal .payment-info div {
+    display: flex;
+    flex-direction: column; /* Coloca título acima da descrição */
+}
+
+/* Título */
+.payment-popup-modal .payment-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2d3748;
+    line-height: 1.3; /* Ajuste na linha */
+}
+
+/* Descrição */
+.payment-popup-modal .payment-description {
+    font-size: 0.85rem;
+    color: #718096;
+    line-height: 1.3;
+}
+
+/* Opções Desabilitadas */
+.payment-popup-modal .payment-option.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #f8f9fa;
+}
+
+.payment-popup-modal .payment-option.disabled:hover {
+    border-color: #e2e8f0;
+    background-color: #f8f9fa;
+}
+
+.payment-popup-modal .payment-option.disabled .payment-info i {
+    color: #adb5bd;
+}
+
+/* Seção Total */
+.payment-popup-modal .payment-total {
+    text-align: center;
+    margin-top: 25px; /* Menos espaço */
+    padding-top: 15px; /* Adiciona espaço acima */
+    border-top: 1px solid #eee; /* Linha divisória sutil */
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+.payment-popup-modal .payment-total strong {
+    font-weight: 800;
+    color: #1a202c;
+}
+
+/* Botão Confirmar */
+.payment-popup-modal .swal2-confirm.btn-confirmar-pagamento {
+    background-color: #6A1B9A !important;
+    border-radius: 10px !important; /* Bordas mais suaves */
+    padding: 12px 30px !important; /* Ajuste no padding */
+    font-size: 1rem !important; /* Tamanho da fonte */
+    margin-top: 10px !important; /* Espaço acima */
+}
+
+/* Remove padding/margin do container interno do HTML do Swal */
+.payment-popup-modal #swal2-html-container {
+    padding: 0 !important;
+    margin: 0 !important;
+}

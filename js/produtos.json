@@ -1,0 +1,128 @@
+{
+    "combo-p": {
+        "nome": "Combo P — 2 Pizzas P + 1 Refri 2L",
+        "descricao": "2 Pizzas Pequenas (30cm) + 1 Refrigerante 2 Litros. Borda recheada grátis 💜",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 23.90,
+        "precoAntigo": 63.80
+    },
+    "combo-m": {
+        "nome": "Combo M — 2 Pizzas M + 1 Refri 2L",
+        "descricao": "2 Pizzas Médias (35cm) + 1 Refrigerante 2 Litros. Borda recheada grátis 💜",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 32.90,
+        "precoAntigo": 73.80
+    },
+    "combo-g": {
+        "nome": "Combo G — 2 Pizzas G + 1 Refri 2L",
+        "descricao": "2 Pizzas Grandes (40cm) + 1 Refrigerante 2 Litros. Borda recheada grátis 💜",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 55.90,
+        "precoAntigo": 123.80
+    },
+    "combo-gigante": {
+        "nome": "Combo Gigante — 2 Pizzas GG + 2 Refri 2L",
+        "descricao": "2 Pizzas Gigantes (45cm) + 2 Refrigerantes 2 Litros. Borda recheada grátis 💜",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 75.90,
+        "precoAntigo": 159.80
+    },
+    "pizza-tradicional": {
+        "nome": "Pizza Tradicional",
+        "descricao": "Escolha seu sabor: Mussarela, Calabresa, Margherita, Portuguesa, Frango com Catupiry ou Quatro Queijos. Massa fresca e ingredientes selecionados.",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 27.90,
+        "precoAntigo": null
+    },
+    "pizza-margherita": {
+        "nome": "Pizza Margherita",
+        "descricao": "Molho de tomate, mussarela, rodelas de tomate e manjericão fresco",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 29.90,
+        "precoAntigo": null
+    },
+    "pizza-calabresa": {
+        "nome": "Pizza Calabresa",
+        "descricao": "Calabresa defumada, cebola fatiada, orégano e mussarela",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 29.90,
+        "precoAntigo": null
+    },
+    "pizza-mussarela": {
+        "nome": "Pizza Mussarela",
+        "descricao": "Mussarela, rodelas de tomate, orégano e azeitonas pretas",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 27.90,
+        "precoAntigo": null
+    },
+    "pizza-portuguesa": {
+        "nome": "Pizza Portuguesa",
+        "descricao": "Presunto, ovos, cebola, ervilha, azeitona e mussarela",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 32.90,
+        "precoAntigo": null
+    },
+    "pizza-frango-catupiry": {
+        "nome": "Pizza Frango com Catupiry",
+        "descricao": "Frango desfiado temperado e Catupiry original",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 34.90,
+        "precoAntigo": null
+    },
+    "pizza-quatro-queijos": {
+        "nome": "Pizza Quatro Queijos",
+        "descricao": "Mussarela, provolone, parmesão e catupiry",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 36.90,
+        "precoAntigo": null
+    },
+    "pizza-chocolate": {
+        "nome": "Pizza de Chocolate",
+        "descricao": "Chocolate ao leite derretido com granulado crocante",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 29.90,
+        "precoAntigo": null
+    },
+    "pizza-prestigio": {
+        "nome": "Pizza Prestígio",
+        "descricao": "Chocolate, coco ralado e leite condensado",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 32.90,
+        "precoAntigo": null
+    },
+    "pizza-banana": {
+        "nome": "Pizza Banana com Canela",
+        "descricao": "Banana fatiada, leite condensado e canela em pó",
+        "imagem": "images/pizzafoto.jpg",
+        "preco": 29.90,
+        "precoAntigo": null
+    },
+    "coca-cola": {
+        "nome": "Coca-Cola 350ml",
+        "descricao": "Latão gelado",
+        "imagem": "images/bebida_1-BjLnVhPo.webp",
+        "preco": 3.90,
+        "precoAntigo": null
+    },
+    "coca-zero": {
+        "nome": "Coca-Cola Zero 350ml",
+        "descricao": "Latão gelado",
+        "imagem": "images/bebida_2-BcAIyQh4.webp",
+        "preco": 3.90,
+        "precoAntigo": null
+    },
+    "fanta-guarana": {
+        "nome": "Fanta Guaraná 350ml",
+        "descricao": "Latão gelado",
+        "imagem": "images/bebida_3-BB39tchP.webp",
+        "preco": 3.90,
+        "precoAntigo": null
+    },
+    "agua-sem-gas": {
+        "nome": "Água sem gás",
+        "descricao": "Garrafa 500ml",
+        "imagem": "images/aguasemgas.avif",
+        "preco": 2.50,
+        "precoAntigo": null
+    }
+}

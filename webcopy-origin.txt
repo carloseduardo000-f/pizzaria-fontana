@@ -1,0 +1,312 @@
+Uri: https://cdn.jsdelivr.net/npm/sweetalert2@11
+File Name: C:\Downloaded Web Sites\japasushi.delivery\npm\sweetalert2@11
+Content Type: application/javascript
+
+Uri: https://cdn.utmify.com.br/scripts/utms/latest.js
+File Name: C:\Downloaded Web Sites\japasushi.delivery\scripts\utms\latest.js
+Content Type: text/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css
+File Name: C:\Downloaded Web Sites\japasushi.delivery\ajax\libs\font-awesome\6.5.0\css\all.min.css
+Content Type: text/css
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.ttf
+File Name: C:\Downloaded Web Sites\japasushi.delivery\ajax\libs\font-awesome\6.5.0\webfonts\fa-brands-400.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.woff2
+File Name: C:\Downloaded Web Sites\japasushi.delivery\ajax\libs\font-awesome\6.5.0\webfonts\fa-brands-400.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.ttf
+File Name: C:\Downloaded Web Sites\japasushi.delivery\ajax\libs\font-awesome\6.5.0\webfonts\fa-regular-400.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2
+File Name: C:\Downloaded Web Sites\japasushi.delivery\ajax\libs\font-awesome\6.5.0\webfonts\fa-regular-400.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.ttf
+File Name: C:\Downloaded Web Sites\japasushi.delivery\ajax\libs\font-awesome\6.5.0\webfonts\fa-solid-900.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2
+File Name: C:\Downloaded Web Sites\japasushi.delivery\ajax\libs\font-awesome\6.5.0\webfonts\fa-solid-900.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-v4compatibility.ttf
+File Name: C:\Downloaded Web Sites\japasushi.delivery\ajax\libs\font-awesome\6.5.0\webfonts\fa-v4compatibility.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-v4compatibility.woff2
+File Name: C:\Downloaded Web Sites\japasushi.delivery\ajax\libs\font-awesome\6.5.0\webfonts\fa-v4compatibility.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js
+File Name: C:\Downloaded Web Sites\japasushi.delivery\ajax\libs\jquery.mask\1.14.16\jquery.mask.min.js
+Content Type: application/javascript
+
+Uri: https://code.jquery.com/jquery-3.6.0.min.js
+File Name: C:\Downloaded Web Sites\japasushi.delivery\jquery-3.6.0.min.js
+Content Type: application/javascript
+
+Uri: https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap
+File Name: C:\Downloaded Web Sites\japasushi.delivery\css2
+Content Type: text/css
+
+Uri: https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap
+File Name: C:\Downloaded Web Sites\japasushi.delivery\css2-1
+Content Type: text/css
+
+Uri: https://fonts.googleapis.com/icon?family=Material+Icons
+File Name: C:\Downloaded Web Sites\japasushi.delivery\icon
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNZ.ttf
+File Name: C:\Downloaded Web Sites\japasushi.delivery\s\materialicons\v145\flUhRq6tzZclQEJ-Vdg-IuiaDsNZ.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4G1ilntA.ttf
+File Name: C:\Downloaded Web Sites\japasushi.delivery\s\nunitosans\v19\pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4G1ilntA.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GCC5ntA.ttf
+File Name: C:\Downloaded Web Sites\japasushi.delivery\s\nunitosans\v19\pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GCC5ntA.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GMS5ntA.ttf
+File Name: C:\Downloaded Web Sites\japasushi.delivery\s\nunitosans\v19\pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GMS5ntA.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/nunitosans/v19/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GVi5ntA.ttf
+File Name: C:\Downloaded Web Sites\japasushi.delivery\s\nunitosans\v19\pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GVi5ntA.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf
+File Name: C:\Downloaded Web Sites\japasushi.delivery\s\poppins\v24\pxiByp8kv8JHgFVrLEj6V1s.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9V1s.ttf
+File Name: C:\Downloaded Web Sites\japasushi.delivery\s\poppins\v24\pxiByp8kv8JHgFVrLGT9V1s.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf
+File Name: C:\Downloaded Web Sites\japasushi.delivery\s\poppins\v24\pxiEyp8kv8JHgFVrFJA.ttf
+Content Type: font/ttf
+
+Uri: https://japasushi.delivery/
+File Name: C:\Downloaded Web Sites\japasushi.delivery\index.htm
+Content Type: text/html
+
+Uri: https://japasushi.delivery/apple-touch-icon.png
+File Name: C:\Downloaded Web Sites\japasushi.delivery\apple-touch-icon.png
+Content Type: image/png
+
+Uri: https://japasushi.delivery/carrinho.html
+File Name: C:\Downloaded Web Sites\japasushi.delivery\carrinho.html
+Content Type: text/html
+
+Uri: https://japasushi.delivery/css/carrinho.css
+File Name: C:\Downloaded Web Sites\japasushi.delivery\css\carrinho.css
+Content Type: text/css
+
+Uri: https://japasushi.delivery/css/delivry.css
+File Name: C:\Downloaded Web Sites\japasushi.delivery\css\delivry.css
+Content Type: text/css
+
+Uri: https://japasushi.delivery/css/produto.css
+File Name: C:\Downloaded Web Sites\japasushi.delivery\css\produto.css
+Content Type: text/css
+
+Uri: https://japasushi.delivery/favicon.ico
+File Name: C:\Downloaded Web Sites\japasushi.delivery\favicon.ico
+Content Type: image/x-icon
+
+Uri: https://japasushi.delivery/images/add_creamcheese.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\add_creamcheese.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/add_gengibre.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\add_gengibre.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/add_hashi.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\add_hashi.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/add_tare.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\add_tare.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/add_wasabi.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\add_wasabi.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/aguasemgas.avif
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\aguasemgas.avif
+Content Type: image/avif
+
+Uri: https://japasushi.delivery/images/banner-entrega-gratis.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\banner-entrega-gratis.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/bebida_1-BjLnVhPo.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\bebida_1-BjLnVhPo.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/bebida_2-BcAIyQh4.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\bebida_2-BcAIyQh4.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/bebida_3-BB39tchP.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\bebida_3-BB39tchP.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/bebida_4-BU0jDof2.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\bebida_4-BU0jDof2.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/bebida_6-CBZjy4rh.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\bebida_6-CBZjy4rh.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/combo-fuji.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\combo-fuji.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/combo-hoshi.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\combo-hoshi.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/combo-koi.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\combo-koi.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/combo-raijin.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\combo-raijin.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/combo-sakura.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\combo-sakura.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/combo-taiyo.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\combo-taiyo.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/entrada_guioza.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\entrada_guioza.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/entrada_harumaki.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\entrada_harumaki.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/entrada_shimeji.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\entrada_shimeji.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/entrada_sunomono.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\entrada_sunomono.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/ifood-logo.png
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\ifood-logo.png
+Content Type: image/png
+
+Uri: https://japasushi.delivery/images/logoheader_japa.png
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\logoheader_japa.png
+Content Type: image/png
+
+Uri: https://japasushi.delivery/images/site-blindado-png-7_480x480.avif
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\site-blindado-png-7_480x480.avif
+Content Type: image/avif
+
+Uri: https://japasushi.delivery/images/siteconfiavel.png
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\siteconfiavel.png
+Content Type: image/png
+
+Uri: https://japasushi.delivery/images/yakisoba-camarao.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\yakisoba-camarao.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/yakisoba-especial.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\yakisoba-especial.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/yakisoba-frango.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\yakisoba-frango.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/yakisoba-lula.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\yakisoba-lula.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/yakisoba-mignon.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\yakisoba-mignon.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/yakisoba-misto.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\yakisoba-misto.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/images/yakisoba-vegetariano.webp
+File Name: C:\Downloaded Web Sites\japasushi.delivery\images\yakisoba-vegetariano.webp
+Content Type: image/webp
+
+Uri: https://japasushi.delivery/index.html
+File Name: C:\Downloaded Web Sites\japasushi.delivery\index.html
+Content Type: text/html
+
+Uri: https://japasushi.delivery/js/carrinho-page.js
+File Name: C:\Downloaded Web Sites\japasushi.delivery\js\carrinho-page.js
+Content Type: text/javascript
+
+Uri: https://japasushi.delivery/js/carrinho.js
+File Name: C:\Downloaded Web Sites\japasushi.delivery\js\carrinho.js
+Content Type: text/javascript
+
+Uri: https://japasushi.delivery/js/delivry.js
+File Name: C:\Downloaded Web Sites\japasushi.delivery\js\delivry.js
+Content Type: text/javascript
+
+Uri: https://japasushi.delivery/js/index.js
+File Name: C:\Downloaded Web Sites\japasushi.delivery\js\index.js
+Content Type: text/javascript
+
+Uri: https://japasushi.delivery/js/produto.js
+File Name: C:\Downloaded Web Sites\japasushi.delivery\js\produto.js
+Content Type: text/javascript
+
+Uri: https://japasushi.delivery/produto.html?id=combo-fuji
+File Name: C:\Downloaded Web Sites\japasushi.delivery\produto-5.html
+Content Type: text/html
+
+Uri: https://japasushi.delivery/produto.html?id=combo-hoshi
+File Name: C:\Downloaded Web Sites\japasushi.delivery\produto-2.html
+Content Type: text/html
+
+Uri: https://japasushi.delivery/produto.html?id=combo-koi
+File Name: C:\Downloaded Web Sites\japasushi.delivery\produto-1.html
+Content Type: text/html
+
+Uri: https://japasushi.delivery/produto.html?id=combo-raijin
+File Name: C:\Downloaded Web Sites\japasushi.delivery\produto.html
+Content Type: text/html
+
+Uri: https://japasushi.delivery/produto.html?id=combo-sakura
+File Name: C:\Downloaded Web Sites\japasushi.delivery\produto-3.html
+Content Type: text/html
+
+Uri: https://japasushi.delivery/produto.html?id=combo-taiyo
+File Name: C:\Downloaded Web Sites\japasushi.delivery\produto-4.html
+Content Type: text/html
+
+Uri: https://japasushi.delivery/site.webmanifest
+File Name: C:\Downloaded Web Sites\japasushi.delivery\site.webmanifest
+Content Type: application/octet-stream
+
+Uri: https://www.facebook.com/tr?id=852860803858822&ev=PageView&noscript=1
+File Name: C:\Downloaded Web Sites\japasushi.delivery\tr
+Content Type: text/plain
+

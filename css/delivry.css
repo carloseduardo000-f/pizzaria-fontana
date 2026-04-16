@@ -1,0 +1,4784 @@
+﻿@import url(../css2-1);
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #a5aaad;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a5aaad;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a5aaad;
+}
+
+/* BASE */
+html {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    font-family: "Nunito Sans", sans-serif; /* <--- FORÇA NUNITO SANS */
+    font-size: 16px;
+    color: #403f3f;
+    background: #f6f6f6;
+    height: auto;
+    min-height: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.btn {
+    display: flex;
+    margin: 10px auto;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #000000;
+    color: #ffffff;
+    border: 0;
+    border-radius: 100px;
+    align-items: center;
+    font-size: 14px;
+    justify-content: center;
+}
+
+.btnSair {
+    position: absolute;
+    top: 10px;
+    right: 55px;
+    width: auto;
+    padding: 10px 10px;
+    cursor: pointer;
+    background: #000000;
+    color: #ffffff;
+    border: 0;
+    border-radius: 100px;
+    align-items: center;
+    font-size: 12px;
+    z-index: 1;
+}
+
+.btnFidelidade {
+    position: absolute;
+    top: 10px;
+    right: 117px;
+    width: auto;
+    padding: 10px 10px;
+    cursor: pointer;
+    background: #000000;
+    color: #ffffff;
+    border: 0;
+    border-radius: 100px;
+    align-items: center;
+    font-size: 12px;
+    z-index: 1;
+}
+
+.btn:hover,
+a.voltar:hover,
+a.voltar2:hover,
+.btnSair:hover,
+.btnFidelidade:hover {
+    opacity: 0.9;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+a.btn {
+    max-width: 270px;
+}
+
+a.login {
+    width: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 12px;
+    margin: 0;
+    z-index: 1;
+}
+
+a.login i {
+    padding-left: 0;
+    font-size: 20px;
+}
+
+.btn i {
+    padding-left: 10px;
+}
+
+.btn i.right {
+    padding-right: 10px;
+    padding-left: 0;
+}
+
+.btnVerde {
+    background: #077c22 !important;
+}
+
+.btnVerde:hover {
+    opacity: 1;
+    background: #3ac93f !important;
+}
+
+.btnCinza {
+    background: #cecece !important;
+    cursor: not-allowed;
+}
+
+.aberto {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #077c22;
+    background-color: #d7fdd7;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.fechado {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #c90000;
+    background-color: #eed3d7;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+@keyframes btn-pisca {
+    0% { opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+.btn-pisca {
+  -webkit-animation: btn-pisca .9s linear infinite;
+  -moz-animation: btn-pisca .9s linear infinite;
+  -ms-animation: btn-pisca .9s linear infinite;
+  -o-animation: btn-pisca .9s linear infinite;
+  animation: btn-pisca .9s linear infinite;
+}
+
+.lojaFechada {
+    padding: 15px 0;
+    text-align: center;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: center;
+    text-align: center;
+}
+
+#login .form {
+    display: none;
+}
+
+#login h1 {
+    font-size: 25px;
+    text-align: center;
+}
+
+#login p {
+    text-align: center;
+}
+
+#login .codigoConfirmacao {
+    display: none;
+}
+
+#login .codigoConfirmacao input {
+    font-size: 25px;
+}
+
+#login .opcoes {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.btnGoogle,
+.btnEmail,
+.btnSemCadastro {
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: #2864EF;
+    max-width: 300px;
+    margin: 5px auto;
+}
+
+.btnGoogle:hover,
+.btnEmail:hover,
+.btnSemCadastro:hover {
+    transition: .2s;
+    opacity: 0.9;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btns .btn {
+    margin: 10px 0 20px 0;
+}
+
+
+/*alertaMSG*/
+.alert {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 2.5%;
+    margin: 10px 0;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    float: left;
+    text-align: center;
+    border-radius: 10px;
+    outline: 2px solid #403f3f;
+}
+
+.alert>span {
+    width: auto;
+    font-size: 25px;
+    padding-right: 20px;
+    color: #c90000;
+    background: none;
+}
+
+.alert-success {
+    outline: 2px solid #077c22;
+    color: #077c22;
+}
+
+.alert-error {
+    outline: 2px solid #b94a48;
+    color: #b94a48;
+}
+
+.alert-info {
+    outline: 2px solid #fbbc05;
+    background-color: #fcefcc;
+    color: #000000;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.containerFinalizar {
+    max-width: 800px;
+    border: 2px solid #cecece;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding: 20px 30px 30px 30px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    display: table;
+}
+
+.containerFinalizar h2 {
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+.containerFinalizar h2:first-child {
+    margin-top: 0;
+}
+
+.opacidade {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 1048;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+a {
+    color: #403f3f;
+}
+
+/* MAIN HEADER */
+header#topo {
+    /*box-shadow: 0 1px 10px rgba(0,0,0,.05);*/
+    background: #ffffff;
+    border-bottom: 1px solid #f8fafc;
+}
+
+header#topo .cover {
+    height: 172px;
+    position: relative;
+    background-size: auto;
+}
+
+header#topo .borda {
+    height: 65px;
+    border-radius: 40px 40px 0 0;
+    background: #ffffff;
+    position: inherit;
+    top: 110px;
+    z-index: 1;
+}
+
+header#topo .cover .logo {
+    position: absolute;
+    top: 55px;
+    left: calc(50% - 60px);
+    z-index: 5;
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 300px;
+    border: 4px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .16);
+    transition: .35s;
+    background: white;
+}
+
+header#topo .cover .logo figure {
+    width: 100%;
+    height: 100%;
+}
+
+header#topo .cover .logo figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .35s;
+}
+
+header#topo .cover .logo:hover img {
+    transform: scale(1.15);
+}
+
+header#topo .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 5px;
+}
+
+header#topo .info h1 {
+    font-family: Poppins;
+    font-weight: 900;
+    color: #676767;
+}
+
+header#topo .info h2 {
+    color: #676767;
+    font-size: 15px;
+    font-family: Poppins;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+header#topo .info .detalhes {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header#topo .info .icones {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+header#topo .info .icones a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    border: 2px solid #EEE;
+    border-radius: 100px;
+    background: #FFF;
+    color: #AAA;
+    font-size: 20px;
+    transition: .2s;
+}
+
+header#topo .info .icones a:hover {
+    color: #676767;
+    border-color: #676767;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .05);
+}
+
+header#topo .info .icones i {
+    display: flex;
+    transition: .2s;
+}
+
+header#topo .info .icones a:hover i {
+    transform: scale(1.1);
+}
+
+header#topo .info .detalhe {
+    display: flex;
+    flex-direction: row;
+    font-size: small;
+    gap: 10px;
+    padding: 2px 0;
+}
+
+header#topo .info .detalhe>div {
+    flex-direction: row;
+}
+
+header#topo .info .mostrarHorario {
+    cursor: pointer;
+    flex-direction: initial;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+header#topo .info .horarios {
+    display: none;
+    font-size: 14px;
+    border: 2px solid #cecece;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    margin: 0 auto 15px auto;
+}
+
+header#topo .info .horarios .item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+header#topo .info .horarios .destaque {
+    font-weight: bold;
+}
+
+header#topo #menuCategorias {
+    padding: 10px;
+}
+
+header#topo #menuCategorias .container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+header#topo #menuCategorias a.pesquisar {
+    color: #ffffff;
+    font-size: 25px;
+    padding: 0 10px;
+}
+
+header#topo #menuCategorias.fixed {
+    position: fixed;
+    top: 0;
+    padding: 15px 0 15px 0;
+    width: 100%;
+    z-index: 11;
+    box-shadow: 0 1px 10px rgb(0 0 0 / 5%);
+}
+
+header#topo .categorias {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: auto;
+    justify-content: center;
+}
+
+header#topo .categorias a {
+    font-size: 16px;
+    color: #ffffff;
+    padding: 5px 20px;
+    white-space: nowrap;
+    font-weight: 700;
+    border-top: 2px solid #000000;
+}
+
+header#topo .categorias a:hover,
+header#topo .categorias a.ativo {
+    color: #ffffff;
+    border-top: 2px solid #ffffff;
+}
+
+header#topo .categorias a.ativo {
+    font-weight: bold;
+}
+
+.form-busca {
+    width: 100%;
+    padding: 8px 0px 5px 0px;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-busca input {
+    width: 50%;
+    min-height: 40px;
+    padding: 9px 10px;
+    padding-left: 20px;
+    font-size: 16px;
+    border: 2px solid #403f3f;
+    background: #fff;
+    border-radius: 25px;
+}
+
+.form-busca input::placeholder {
+    font-weight: 600;
+    color: #000000;
+}
+.form-busca span{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+}
+
+main#lista {
+    margin-top: 5px;
+    padding-bottom: 85px;
+}
+
+main#lista h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Layout padrão MOBILE */
+main#lista .produtos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+/* Tablet: 2 colunas */
+@media (min-width: 768px) {
+  main#lista .produtos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Desktop: 3 colunas */
+@media (min-width: 1024px) {
+  main#lista .produtos {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  /* Cards verticais e alinhados */
+  main#lista .produtos .item a {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  main#lista .produtos .item .fotoProduto {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  main#lista .produtos .item figure {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+
+/* Ajuste AUTOMÁTICO para telas maiores */
+@media (min-width: 768px) {
+    main#lista .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    main#lista .produtos {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+
+main#lista .produtos .item a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 10px 15px;
+    background: #FFF;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    border: 2px solid #cecece;
+}
+/* desativado manualmente por causa da foto no card - atualmente 0px mas estava 20px*/
+main#lista .produtos .item:last-child a {
+    margin-bottom: 20px;
+}
+
+main#lista .produtos .item a:hover {
+    background: #f8fafc;
+}
+
+main#lista .produtos .item .texto {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+
+main#lista .produtos .item .texto h3 {
+    font-size: 16px;
+}
+
+main#lista .produtos .item .texto span {
+    font-size: 14px;
+}
+
+main#lista .produtos .item .texto span.precoPromocao {
+    text-decoration: line-through;
+}
+
+main#lista .produtos .item .texto span.preco {
+    color: #077c22;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+span.estoque {
+    font-size: 12px !important;
+}
+
+main#lista .produtos .item .fotoProduto {
+    display: flex;
+}
+
+main#lista .produtos .item figure {
+    width: 110px;
+    height: 110px;
+    border: none; /* removendo a borda interna que cria o efeito de linha */
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: none; /* garante que nenhuma sombra interna interfira */
+}
+main#lista .produtos .item a {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05); /* sombra externa suave e elegante */
+}
+
+
+main#lista .produtos .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main #desenvolvimento {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+}
+
+main #desenvolvimento img:hover {
+    opacity: 0.7;
+}
+
+main #desenvolvimento .btn2 {
+    padding: 5px 10px;
+    border: 1px solid #676767;
+    border-radius: 20px;
+    width: 300px;
+    margin: 10px auto 35px auto;
+}
+
+main #desenvolvimento .btn2:hover {
+    background: #2864EF;
+    border: 1px solid #2864EF;
+    color: #ffffff;
+}
+
+/* Footer geral (corrigido) */
+footer {
+    position: relative;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+    text-align: center;
+    padding: 55px 20px 30px;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+}
+
+
+#info {
+    width: 100%;
+    max-width: 550px;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    z-index: 1049;
+    background: #ffffff;
+    box-shadow: 0 0 30px rgb(0 0 0 / 10%);
+    overflow-y: auto;
+    padding: 20px;
+    display: none;
+}
+
+#info a.fechar {
+    color: #cecece;
+}
+
+#info.mostrar {
+    display: block;
+    padding: 20px;
+}
+
+#meuCarrinho {
+    width: 100%;
+    max-width: 550px;
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    display: none;
+    z-index: 1049;
+    background: #ffffff;
+    box-shadow: 0 0 30px rgb(0 0 0 / 10%);
+    overflow-y: auto;
+}
+
+#meuCarrinho.mostrar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#meuCarrinho a.fechar {
+    color: #cecece;
+}
+
+#meuCarrinho a.fechar:hover {
+    color: #c9c6c6;
+}
+
+#meuCarrinho h1 {
+    text-align: center;
+}
+
+#meuCarrinho .lista {
+    margin-top: 10px;
+    overflow-y: auto;
+    font-family: "Poppins", sans-serif;
+}
+
+#meuCarrinho .lista {
+    display: flex;
+    flex-direction: column;
+}
+
+#meuCarrinho .lista .item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #cecece;
+    padding: 10px 0;
+}
+
+#meuCarrinho .lista .item .col {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 0 5px;
+    min-width: 100px;
+}
+
+.lista .item .col .nomeProduto {
+    text-align: left;
+    font-weight: bold;
+}
+
+.lista .item .col .detalheProduto {
+    text-align: left;
+}
+
+.lista .item .col .complementosProduto,
+.lista .item .col .obsProduto {
+    padding-top: 10px;
+    text-align: left;
+}
+
+#meuCarrinho .totalPedido {
+    text-align: center;
+    margin: 20px 0;
+    background: #f5f5f5;
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+#meuCarrinho .totalPedido span,
+#pedido .totalPedido span {
+    color: #077c22;
+    font-weight: bold;
+}
+
+#meuCarrinho em {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+#meuCarrinho .carrinhoVazio {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#meuCarrinho .carrinhoVazio p {
+    padding: 20px 0;
+}
+
+a.voltar,
+a.voltar2 {
+    display: table;
+    padding: 10px 20px;
+    align-items: center;
+    background: red;
+    color: #ffffff;
+    border-radius: 100px;
+    margin: 10px 0;
+    font-size: 12px;
+    position: fixed;
+    top: 0;
+    left: 10px;
+}
+
+a.voltar i,
+a.voltar2 i {
+    padding-right: 10px;
+}
+
+#produto {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    background: #ffffff;
+    overflow-y: auto !important;
+    display: none;
+}
+
+#detalhesProduto .info1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#detalhesProduto .info1 .fotoProduto {
+    margin-right: 20px;
+}
+
+#detalhesProduto .info1 .fotoProduto figure {
+    max-width: 300px;
+    max-height: 300px;
+    overflow: hidden;
+    margin: 0;
+}
+
+#detalhesProduto .info1 .fotoProduto figure img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#detalhesProduto .info1 .descricao {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+#detalhesProduto .info1 .precoPromocao {
+    text-decoration: line-through;
+}
+
+#detalhesProduto .info1 .preco {
+    color: #077c22;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#detalhesProduto .info2 {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+#detalhesProduto .info2 .tipo {
+    margin-bottom: 20px;
+}
+
+#detalhesProduto .info2 .tipo .topo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #cecece;
+    border-radius: 10px 10px 0 0;
+    color: #000000;
+}
+
+#detalhesProduto .info2 .tipo .fixed {
+    position: sticky;
+    top: 50px;
+    z-index: 2;
+}
+
+#detalhesProduto .info2 h3 {
+    padding: 10px 10px 0 10px;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+#detalhesProduto .info2 .tipo .topo span.detalhe {
+    display: flex;
+    font-size: 14px;
+    padding-bottom: 10px;
+    padding: 0 10px 10px 10px;
+}
+
+#detalhesProduto .info2 .tipo .topo .col2 {
+    width: 160px;
+    padding-right: 15px;
+    text-align: right;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 3px;
+}
+
+#detalhesProduto .info2 .tipo .topo .col2 span {
+    font-size: 8px;
+    padding: 5px 8px;
+    background: #000000;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+#detalhesProduto .info2 .tipo .topo .col2 span.escolhidos span {
+    padding: 0;
+}
+
+#detalhesProduto .info2 .tipo .topo .col2 i {
+    display: none;
+    color: #077c22;
+    font-size: 20px;
+}
+
+#detalhesProduto .info2 .opcoes {
+    display: flex;
+    justify-content: space-between;
+    border: 1px dashed #cecece;
+    border-top: 0;
+    padding: 10px;
+    gap: 10px;
+}
+
+#detalhesProduto .info2 .opcoes > div.desc {
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+#detalhesProduto .info2 .opcoes > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#detalhesProduto .info2 .opcoes:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+#detalhesProduto .info2 .opcoes .nome .preco {
+    color: #077c22;
+    font-weight: bold;
+}
+
+
+#detalhesProduto .info2 .opcoes input.opcao {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+#detalhesProduto .info2 .opcoes input+label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 60px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+#detalhesProduto .info2 .opcoes input[type=checkbox]+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 46px;
+    height: 26px;
+    border-radius: 100px;
+    background: #ccc;
+    border: solid 2px #cccccc;
+    vertical-align: bottom;
+}
+
+#detalhesProduto .info2 .opcoes input[type=checkbox]+label::after {
+    content: '';
+    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    transition: .35s;
+}
+
+#detalhesProduto .info2 .opcoes input[type=checkbox]:checked+label::after {
+    content: '';
+    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 25px;
+    bottom: 5px;
+}
+
+#detalhesProduto .info2 .opcoes span.detalheOpcao {
+    font-size: 13px;
+    font-style: italic;
+    display: flex;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.imagem-ampliada {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+
+.imagem-ampliada img {
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+}
+.imagem-ampliada button {
+    background-color: #ffffff;
+    border: 0;
+    padding: 10px;
+    position: absolute;
+    bottom: 12px;
+    right: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.imagem-ampliada button.fechar {
+    top: 5px;
+    bottom: auto;
+    padding: 5px 10px;
+}
+
+.info2 em,
+.observacao2 em {
+    text-align: right;
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+#detalhesProduto .info3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 30px;
+    background: #ffffff;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    box-shadow: 0 0 30px rgb(0 0 0 / 10%);
+}
+
+#detalhesProduto .info3 #precoProduto {
+    font-weight: bold;
+    font-size: 18px;
+    color: #077c22;
+}
+
+.qtdeProduto,
+.qtdeProdutoOpcao {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #cecece;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: #ffffff;
+    max-width: 125px;
+    height: 40px;
+}
+
+#meuCarrinho .qtdeProduto {
+    margin-top: 5px;
+}
+
+.qtdeProduto button,
+.qtdeProdutoOpcao button {
+    min-width: 45px;
+    border: 0;
+    background: none;
+    color: #676767;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.qtdeProdutoOpcao button {
+    min-width: 45px;
+}
+
+.qtdeProdutoOpcao button:disabled, .qtdeProduto button:disabled {
+    color: #cecece;
+    cursor: not-allowed;
+}
+
+.qtdeProduto button i,
+.qtdeProdutoOpcao button i {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#detalhesProduto button.adicionarProduto {
+    margin: 0;
+}
+
+#detalhesProduto .info3 input,
+#meuCarrinho .lista .item input,
+#detalhesProduto .info2 .opcoes .qtdeProdutoOpcao input {
+    text-align: center;
+    min-width: 0;
+    display: flex;
+    border: 0;
+    background: #ffffff;
+}
+
+#pedido .lista {
+    display: flex;
+    flex-direction: column;
+}
+
+#pedido .lista .item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #cecece;
+    padding: 10px 0;
+}
+
+#pedido .lista .item .col {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 0 5px;
+}
+
+#pedido .lista .item .col:nth-child(2) {
+    min-width: 100px;
+}
+
+#pedido .totalPedido {
+    text-align: center;
+    margin-top: 40px;
+    background: #f5f5f5;
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+#pedido .observacao2 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form {
+    width: 100%;
+    display: table;
+}
+
+.form .campo {
+    width: 100%;
+    float: left;
+}
+
+.form .input75 {
+    width: 75%;
+}
+
+.form .input50 {
+    width: 50%;
+}
+
+.form .input25 {
+    width: 25%;
+}
+
+.form .espaco {
+    padding-left: 3%;
+}
+
+#detalhesProduto .info2>label,
+#pedido .observacao2 label,
+.form label {
+    margin-top: 10px;
+    font-weight: bold;
+    float: left;
+}
+
+#detalhesProduto .info2>input,
+#pedido .observacao2 input,
+.form input {
+    width: 100%;
+    height: 53px;
+    border: 2px solid #ccc;
+    padding: 0 20px;
+    margin-top: 5px;
+    font-size: 16px;
+    border-radius: 100px;
+}
+
+.form select {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    background: none;
+    height: 53px;
+    padding: 0 20px;
+    color: #676767;
+}
+
+input::placeholder {
+    color: #dddddd !important;
+    opacity: 1; /* Firefox */
+}
+
+#pedido .entrega {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+#pedido .entrega .radio {
+    box-sizing: border-box;
+    float: left;
+    height: 60px;
+    position: relative;
+    width: 100%;
+}
+
+#pedido .entrega .radio+.radio {
+    margin-left: 25px;
+}
+
+#pedido .entrega .radio label {
+    background: #fff no-repeat center center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+
+#pedido .entrega .radio label span {
+    z-index: 1;
+    color: #676767;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+#pedido .entrega .radio label input[type=radio] {
+    all: unset;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#pedido .entrega .radio label input[type=radio]:checked {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+
+#pedido .entrega .radio label input[type=radio]:checked+span,
+#pedido .entrega .radio label:hover span {
+    color: #ffffff;
+}
+
+#pedido .mostrarEntrega {}
+
+#pedido .mostrarRetirada {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f5;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+#pedido .entregaRetirada b {
+    padding-bottom: 10px;
+}
+
+#pedido .valores {
+    margin-top: 20px;
+}
+
+#pedido .valores div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#pedido .valores .resumoSubtotalPedido {
+    font-weight: 600;
+}
+
+#pedido .valores .resumoTotalPedido {
+    border-top: 1px dashed #cecece;
+    font-weight: 600;
+}
+
+#pedido .valores .resumoTotalPedido span {
+    color: #077c22;
+}
+
+#pedido .trocarPontos {
+    display: flex;
+    justify-content: center;
+}
+
+#pedido .trocarPontos input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+#pedido .trocarPontos input+label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 60px;
+    float: left;
+}
+
+#pedido .trocarPontos input[type=checkbox]+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 46px;
+    height: 26px;
+    border-radius: 100px;
+    background: #ccc;
+    border: solid 2px #cccccc;
+    vertical-align: bottom;
+}
+
+#pedido .trocarPontos input[type=checkbox]+label::after {
+    content: '';
+    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+
+#pedido .trocarPontos input[type=checkbox]:checked+label::after {
+    content: '';
+    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 25px;
+    bottom: 5px;
+    transition: .35s;
+}
+
+#pedido .pagamentos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#pedido .pagamentos input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+#pedido .pagamentos input+label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 60px;
+    float: left;
+}
+
+#pedido .pagamentos input[type=radio]+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 46px;
+    height: 26px;
+    border-radius: 100px;
+    background: #ccc;
+    border: solid 2px #cccccc;
+    vertical-align: bottom;
+}
+
+#pedido .pagamentos input[type=radio]+label::after {
+    content: '';
+    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+
+#pedido .pagamentos input[type=radio]:checked+label::after {
+    content: '';
+    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 25px;
+    bottom: 5px;
+    transition: .35s;
+}
+
+#pedido .pagamentos input.troco {
+    position: relative;
+    opacity: 100;
+    z-index: 1;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    height: 53px;
+    padding: 0 20px;
+    margin-top: 5px;
+}
+
+#modalCarregando {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+#modal {
+    width: 100%;
+    height: 100%;
+    z-index: 1049;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#modal .container {
+    max-width: 600px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .16);
+    border-top: 4px solid #E74C3C;
+    padding: 20px;
+    margin: 0 20px;
+}
+
+#modal .container .titulo i {
+    color: #E74C3C;
+    padding-right: 10px;
+}
+
+#modal .container .titulo {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#modal .container button {
+    background: #E74C3C;
+    margin: 0;
+    float: right;
+}
+
+#rastreamento {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    border-top: 2px solid #dee2e6;
+}
+
+#rastreamento .registro {
+    display: block;
+    position: relative;
+    text-align: center;
+    padding-top: 25px;
+    margin-right: 0;
+}
+
+#rastreamento .registro:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    border-right: 2px dashed #dee2e6;
+    top: 0;
+}
+
+#rastreamento .registro span {
+    display: table;
+    margin: 0 auto;
+    padding: 5px 20px;
+}
+
+#rastreamento .registro span.passou,
+#rastreamento .registro span.confirmacao {
+    background: #777777;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+#rastreamento .registro span.confirmacao {
+    background: #f9bc0b;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+#pedidoSelecionado {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    z-index: 6;
+}
+
+#meuspedidos .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#meuspedidos .item .ver-pedido i:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+#meuspedidos .item span.pedido {
+    display: none;
+}
+
+#meuspedidos .item a.btnAconpanhar {
+    width: 25px;
+    height: 25px;
+    background: #077c22;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-left: 10px;
+}
+
+#meuspedidos .item a.btnAconpanhar:hover {
+    opacity: 0.9;
+}
+
+.pagamentos .item span {
+    font-size: 13px;
+    color: #077c22;
+}
+
+.copiado {
+    background: #077c22;
+    color: #ffffff !important;
+    padding: 10px 10px;
+    display: none;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 9999
+}
+
+@keyframes fa-blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fa-blink {
+    -webkit-animation: fa-blink .75s linear infinite;
+    -moz-animation: fa-blink .75s linear infinite;
+    -ms-animation: fa-blink .75s linear infinite;
+    -o-animation: fa-blink .75s linear infinite;
+    animation: fa-blink .75s linear infinite;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    header#topo {
+        padding-bottom: 0;
+    }
+
+    header#topo .info h1 {
+        font-size: x-large;
+    }
+
+    header#topo .info .horarios {
+        width: 80%;
+    }
+
+    header#topo .categorias {
+        overflow: hidden;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .form-busca input {
+        width: 100%;
+    }
+
+    main#lista .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    main#lista .produtos .item {
+        width: 100%;
+    }
+
+    #detalhesProduto .info1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #detalhesProduto .info1 .fotoProduto {
+        width: 100%;
+        margin: 0 0 10px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    #detalhesProduto .info1 .fotoProduto figure {
+        width: auto;
+    }
+
+    .containerFinalizar {
+        border: 0;
+        padding: 0 20px;
+    }
+
+    #pedido .pagamentos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #rastreamento {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .aberto, .fechado {
+        position: fixed;
+        left: 10px;
+        top: 10px;
+    }
+
+    header#topo .info .icones {
+        gap: 5px;
+    }
+    
+    header#topo .info .icones a {
+        width: 40px;
+        height: 40px;
+    }
+    
+    header#topo .info .mostrarHorario {
+        flex-direction: row;
+    }
+
+    header#topo .info .horarios {
+        width: 90%;
+    }
+
+    main#lista .produtos {
+        gap: 10px;
+    }
+
+    main#lista .produtos .item .texto {
+        max-width: 220px;
+    }
+
+    #pedido h2 {
+        font-size: 20px;
+    }
+
+    #pedido .entrega .radio {
+        height: 80px;
+    }
+
+    #pedido .entrega .radio label,
+    #pedido .entrega .radio label input[type=radio]:checked {
+        border-radius: 10px;
+    }
+
+    .form .input75,
+    .form .input50,
+    .form .input25 {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .imagem-ampliada {
+        position: fixed;
+        top: 50%;
+        left: 25%;
+        transform: translate(-17%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+        display: none;
+    }
+
+    #detalhesProduto .info2 .opcoes > div.desc {
+        flex-direction: column;
+        gap: 5px;
+        align-items: end;
+    }
+
+    #detalhesProduto .info2 .opcoes > div.desc .nome {
+        width: 100%;
+    }
+}
+
+.box {
+    padding: .8rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.countdown {
+    /* padding: .5rem 1rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#days, #hours, #seconds, #minutes {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.box span {
+    font-size: 1rem;
+    display: block;
+}
+
+.box p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.pulsar {
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(193, 30, 36, 0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(193, 30, 36, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(193, 30, 36, 0); }
+}
+
+/* ===== NOVO CABEÇALHO EL CHAPPO BURGER ===== */
+
+header#topo {
+  background-color: #EA1D2C;
+  padding: 20px 0 10px 0;
+  text-align: center;
+}
+
+header#topo .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header#topo .logo-topo {
+  height: 60px;
+}
+
+header#topo .avaliacao {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+header#topo .avaliacao i {
+  color: gold;
+  margin-right: 6px;
+}
+
+.header-local {
+  background-color: #fff4f0;
+  margin: 10px auto 0;
+  border-radius: 10px;
+  padding: 8px 15px;
+  display: inline-block;
+}
+
+.header-local h2 {
+  color: #470e0e;
+  font-size: 16px;
+  font-weight: 700;
+}
+/* ===== HEADER CENTRALIZADO AJUSTADO EL FUEGO BURGER ===== */
+
+header#topo {
+  background-color: #EA1D2C; /* vermelho El Fuego */
+  padding: 0px 0 0px 0;
+  text-align: center;
+  position: relative;
+}
+
+/* Área principal (logo + avaliação) */
+header#topo .header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+header#topo .logo-topo {
+  height: 100px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+/* Avaliação menor e mais discreta */
+header#topo .avaliacao {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+header#topo .avaliacao i {
+  color: gold;
+  margin-right: 4px;
+  font-size: 18px;
+}
+
+header#topo .avaliacao .nota {
+  font-size: 16px;
+}
+
+header#topo .avaliacao .nota-cinza {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* Bloco da localização — fora da área vermelha */
+.header-local {
+  background-color: #ffffff;
+  border: 2px solid #EA1D2C;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.header-local h2 {
+  color: #470e0e;
+  font-size: 17px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+
+/* mantém o mesmo tom e bordas */
+.local-banner-container .local-text {
+  background-color: #FFF2EB;
+  padding: 10px 0 6px 0;
+}
+
+/* texto ligeiramente menor, mais encorpado e apertado */
+.local-banner-container .local-text span {
+  font-size: 16.5px;
+  font-weight: 900;
+  color: #73152B;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+.local-banner-container .banner-entrega {
+  background-color: #FFF2EB;
+}
+
+.local-banner-container .banner-entrega img {
+  width: 100%;
+  display: block;
+  border-radius: 0 0 18px 18px;
+  transition: all 0.3s ease;
+}
+
+/* leve realce quando passa o mouse (efeito elegante) */
+.local-banner-container:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.09);
+}
+/* ======================================================
+   POLIMENTO FINAL - BARRA DE INFORMAÇÕES PREMIUM V2
+   ====================================================== */
+
+.barra-info-delivery {
+  background-color: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 16px 25px; /* Mais "respiro", como na referência */
+  margin: 16px auto 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 560px;
+  color: #374151; /* Nova cor base, um cinza-escuro mais suave */
+  box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+  font-size: 14px;
+  line-height: 1.15;
+  font-weight: 600; /* Deixa o texto base um pouco mais forte */
+}
+
+.barra-info-delivery .item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.barra-info-delivery .ponto-verde {
+  background-color: #22c55e; /* Verde mais claro e vibrante */
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.barra-info-delivery .status {
+  color: #22c55e; /* Verde mais claro e vibrante */
+  font-weight: 700;
+}
+
+.barra-info-delivery .divisor {
+  color: #e5e7eb; /* Divisor ainda mais suave */
+}
+
+/* ⭐ AQUI ESTÁ A MÁGICA DOS ÍCONES VAZADOS ⭐ */
+.barra-info-delivery .icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;   /* Usa a cor do texto pai (#374151) */
+  fill: none;             /* Remove o preenchimento (efeito "vazado") */
+  stroke-width: 2;        /* Ajusta a espessura da linha */
+}
+
+/* Texto de ênfase (distância e tempo) */
+.barra-info-delivery b {
+  font-weight: 800; /* Mais forte para destaque */
+  color: #111827;    /* Um preto suave para o texto em negrito */
+}
+
+/* Responsividade (não precisa mexer, já estava boa) */
+@media (max-width: 480px) {
+  .barra-info-delivery {
+    font-size: 12.5px;
+    gap: 12px;
+    padding: 12px 18px;
+    border-radius: 14px;
+  }
+  .barra-info-delivery .icon { width: 16px; height: 16px; stroke-width: 2; }
+}
+
+
+.combo-card-v3:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* === FAIXA PROMOCIONAL === */
+.faixa-promocional {
+  background: linear-gradient(90deg, #C11E24, #E63E2A);
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.faixa-promocional .diaPromo {
+  display: inline-block;
+  animation: pulseFaixa 1.8s infinite;
+}
+
+@keyframes pulseFaixa {
+  0% { text-shadow: 0 0 6px rgba(255, 255, 255, 0.6); }
+  50% { text-shadow: 0 0 12px rgba(255, 255, 255, 0.8); }
+  100% { text-shadow: 0 0 6px rgba(255, 255, 255, 0.6); }
+}
+
+/* === TÍTULO === */
+.combo-nome {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #73152B;
+  text-align: center;
+  margin: 10px 0 8px 0;
+}
+
+/* === DESCRIÇÃO === */
+.combo-descricao {
+  list-style: none;
+  padding: 0 20px;
+  margin: 0 0 12px;
+}
+
+.combo-descricao li {
+  font-size: 0.95rem;
+  color: #555;
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 4px;
+}
+
+.combo-descricao li::before {
+  content: "•";
+  color: #C11E24;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* === PREÇOS === */
+.combo-preco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.combo-preco .preco-antigo {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.combo-preco .preco-atual b {
+  background: #00A44B;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+/* === ESTOQUE === */
+.combo-restante {
+  font-size: 0.85rem;
+  color: #C11E24;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* === IMAGEM === */
+.combo-imagem-v3 {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  height: 180px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.combo-imagem-v3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.combo-imagem-v3:hover img {
+  transform: scale(1.05);
+}
+
+.selo-desconto {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #C11E24;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+/* Remover fundo/caixa do texto SÓ HOJE dentro da faixa vermelha */
+.faixa-promocional .diaPromo,
+.faixa-promocional .diaPromoEstilo {
+  background: transparent !important;
+  color: #fff !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: inline !important;
+}
+/* === CORREÇÃO DE CENTRALIZAÇÃO E PULSAR === */
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os cards na página */
+  gap: 20px;
+  padding: 0;
+}
+
+.produtos .item {
+  flex: 0 0 320px; /* largura fixa proporcional */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.produtos .item a.pulsar {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 0 0 rgba(193, 30, 36, 0.5);
+  animation: pulse 2s infinite;
+}
+
+/* efeito de pulsação perfeitamente encaixado */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(193, 30, 36, 0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(193, 30, 36, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(193, 30, 36, 0); }
+}
+/* ==========================================================
+   CORREÇÃO DEFINITIVA DO PULSAR - APLICAÇÃO DIRETA NO CARD
+   ========================================================== */
+
+/* Remove o pulsar do link externo */
+.produtos .item a.pulsar {
+  animation: none !important;
+  box-shadow: none !important;
+}
+
+/* Aplica o efeito diretamente no card interno */
+.combo-card-v3 {
+  position: relative;
+  border-radius: 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.combo-card-v3::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 24px;
+  border: 2px solid #C11E24;
+  animation: pulseGlow 1.8s infinite ease-in-out;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* animação */
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(193, 30, 36, 0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+    box-shadow: 0 0 25px rgba(193, 30, 36, 0.7);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(193, 30, 36, 0.4);
+  }
+}
+
+/* Mantém o conteúdo (banners, títulos etc.) acima do efeito */
+.combo-card-v3 * {
+  position: relative;
+  z-index: 2;
+}
+/* =======================================================
+   REATIVAÇÃO DO PULSAR ESPECIFICAMENTE NO CARD NOVO
+   ======================================================= */
+
+
+
+
+}
+/* ==========================================
+   Ajuste de tamanho do texto "Apenas X combo(s)..."
+   ========================================== */
+
+/* pega todos os textos com "combo" dentro do card */
+.combo-card-v3 *:contains("combo") {
+  font-size: 13px !important;
+  line-height: 1.3em !important;
+  text-align: center !important;
+  display: block;
+}
+
+/* fallback caso o seletor acima não funcione no seu interpretador */
+.combo-card-v3 .oferta-limitada,
+.combo-card-v3 .estoque,
+.combo-card-v3 .qtd,
+.combo-card-v3 .aviso,
+.combo-card-v3 p:nth-last-of-type(2) {
+  font-size: 12.5px !important;
+  line-height: 1.3em !important;
+  text-align: center !important;
+}
+.combo-card-v3 {
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.03);
+}
+/* ============================================
+   CENTRALIZAÇÃO E LARGURA UNIFORME DOS CARDS
+   ============================================ */
+
+/* Centraliza os cards dentro da seção */
+.produtos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Define uma largura fixa padrão para todos os .item */
+.produtos .item {
+  width: 100%;
+  max-width: 420px; /* ajuste ideal para o layout */
+  margin: 20px auto; /* centraliza */
+  display: flex;
+  justify-content: center;
+}
+
+/* Faz o link ocupar 100% da área do card */
+.produtos .item a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+/* Mantém os novos cards consistentes */
+.combo-card-v3 {
+  width: 100%;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: #fff;
+}
+/* ============================================
+   AJUSTE DO ESPAÇAMENTO ENTRE OS CARDS
+   ============================================ */
+
+.produtos .item {
+  margin: 8px auto !important; /* antes era 20px */
+}
+
+.combo-card-v3 {
+  margin-bottom: 10px; /* garante consistência visual */
+}
+/* ============================================
+   SOMBRA SUAVE PARA OS CARDS
+   ============================================ */
+.combo-card-v3 {
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* sombra elegante */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+/* ============================================
+   SOMBRA DIFUSA ESTILO iFOOD PRO (MOBILE FIRST)
+   ============================================ */
+
+.combo-card-v3 {
+  border: 1px solid #ececec; /* borda leve */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07), 
+              0 3px 6px rgba(0, 0, 0, 0.05); /* dupla camada de sombra difusa */
+  border-radius: 22px;
+  transition: all 0.25s ease-in-out;
+  background-color: #fff;
+}
+
+/* Efeito de toque no mobile (simula leve pressão) */
+.combo-card-v3:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.09),
+              0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* Garantindo responsividade no mobile */
+@media (max-width: 600px) {
+  .combo-card-v3 {
+    margin-bottom: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07),
+                0 2px 4px rgba(0, 0, 0, 0.04);
+  }
+}
+/* ==== TITULOS DAS SECOES (Combos / Hamburgueres) ==== */
+.categoria h2 {
+  font-size: 5rem; /* Aumenta o impacto visual */
+  font-weight: 900;
+  color: #111; /* Preto puro */
+  margin: 28px 0 18px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  letter-spacing: -0.5px;
+}
+/* ==== CARDS DE HAMBURGUERES ==== */
+#hamburgueres .item {
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  transition: all 0.25s ease;
+}
+
+#hamburgueres .item:hover {
+  transform: scale(1.015);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+#hamburgueres .item .texto {
+  flex: 1;
+  margin-right: 12px;
+}
+
+#hamburgueres .item .texto h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+#hamburgueres .item .texto span {
+  display: block;
+  color: #6b6b6b; /* Cinza médio */
+  font-size: 0.93rem;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+#hamburgueres .item .texto .preco {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #009933; /* Verde chamativo */
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+#hamburgueres .fotoProduto img {
+  border-radius: 12px;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+}
+body {
+  background-color: #f6f6f6;
+}
+/* ===== AJUSTE DE BORDAS E SOMBRAS - CORREÇÃO DO ANEL BRANCO ===== */
+
+/* Aplica-se aos cards de hambúrgueres e combos */
+.combo-card-v3,
+#hamburgueres .item {
+  border: 1px solid #dcdcdc; /* Borda cinza fina */
+  background-color: #fdfdfd; /* Um branco ligeiramente acinzentado */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sombra com difusão mais colada ao card */
+.combo-card-v3::after,
+#hamburgueres .item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.05);
+  z-index: -1;
+}
+
+/* Realce de hover */
+#hamburgueres .item:hover,
+.combo-card-v3:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
+}
+/* ===== CORREÇÃO COMPLETA DE BORDAS E SOMBRAS ===== */
+
+#hamburgueres .item {
+  background: #fdfdfd;              /* Um branco levemente acinzentado */
+  border: 1px solid #d0d0d0;        /* Linha cinza bem definida */
+  border-radius: 16px;              /* Cantos suaves */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;                 /* Impede qualquer "halo" branco */
+  padding: 10px 14px;               /* Reduz o padding interno */
+  transition: all 0.25s ease;
+  width: 94%;                       /* Faz o card um pouco menor para flutuar melhor */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hover leve */
+#hamburgueres .item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
+}
+
+/* Texto */
+#hamburgueres .item .texto {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#hamburgueres .item .texto h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+#hamburgueres .item .texto span {
+  display: block;
+  color: #6b6b6b;
+  font-size: 0.93rem;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+#hamburgueres .item .texto .preco {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #009933;
+}
+
+/* Imagem */
+#hamburgueres .fotoProduto img {
+  border-radius: 12px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Fundo da página para contraste */
+body {
+  background: #f6f6f6;
+}
+/* 1) Tira a borda/fundo do link nos cards que têm o redesign */
+#hamburgueres .item > a {
+  border: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;           /* padding ficará no container */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 2) O container vira o "card" de verdade (borda + sombra + padding) */
+#hamburgueres .item {
+  background: #fff;
+  border: 1px solid #d4d4d4;       /* borda cinza fina */
+  border-radius: 16px;
+  padding: 12px 16px;              /* espaço interno do card */
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+  width: 94%;
+  margin: 0 auto 18px;
+  overflow: hidden;                 /* garante que nada vaze a curva */
+}
+
+/* 3) Remove a borda da imagem só nessa seção (se quiser o visual da referência) */
+#hamburgueres .item figure {
+  border: 0 !important;
+}
+
+/* 4) (Opcional) um hover suave no mobile não interfere, mas deixa bonito no desktop */
+#hamburgueres .item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.10);
+}
+/* ===== CORREÇÃO DOS ANÉIS BRANCOS NOS COMBOS ===== */
+
+.combo-card-v3 a,
+.item > a.disponivel.pulsar {
+  border: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  display: block;
+}
+
+
+
+/* Hover opcional */
+.combo-card-v3:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+}
+/* ===== CORREÇÃO DO PULSAR (AJUSTADO AO TAMANHO DO CARD) ===== */
+.pulsar-wrapper {
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.pulsar-wrapper::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 0, 0, 0.35);
+  animation: pulsarAnim 1.6s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pulsar-wrapper .combo-card-v3 {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+
+
+/* Pulsação suave */
+@keyframes pulsarAnim {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+/* ===== CORREÇÃO FINAL DO PULSAR ===== */
+
+/* Remove completamente o efeito do link externo */
+.produtos .item a.pulsar {
+  animation: none !important;
+  box-shadow: none !important;
+  position: relative;
+  display: block;
+}
+
+/* Aplica o pulsar diretamente no card real */
+.combo-card-v3.pulsar {
+  position: relative;
+  z-index: 1;
+  border-radius: 22px;
+  overflow: visible; /* libera o pulsar para brilhar para fora */
+}
+
+
+
+/* Animação refinada */
+@keyframes pulsarGlow {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(193, 30, 36, 0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgba(193, 30, 36, 0.6);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(193, 30, 36, 0.4);
+  }
+}
+
+/* Mantém todo o conteúdo acima do brilho */
+.combo-card-v3 * {
+  position: relative;
+  z-index: 2;
+}
+/* ======== CORREÇÃO FINAL DO PULSAR ======== */
+
+/* Garante que containers permitam o brilho sair */
+.produtos, .container {
+  overflow: visible !important;
+}
+
+/* Card principal */
+.combo-card-v3 {
+  position: relative;
+  background: #111; /* Troca o branco por um tom escuro neutro */
+  border: none;
+  border-radius: 20px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin: 0 auto 22px;
+  width: 94%;
+  z-index: 1;
+  overflow: visible;
+}
+
+
+
+
+@keyframes pulsarFix {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(193, 30, 36, 0.6);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(193, 30, 36, 0.8);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(193, 30, 36, 0.6);
+  }
+}
+
+/* Garante que o conteúdo do card fique acima do brilho */
+.combo-card-v3 * {
+  position: relative;
+  z-index: 2;
+}
+/* ======= CORREÇÃO FINAL DO PULSAR ======= */
+.combo-card-v3.pulsar {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.combo-card-v3.pulsar::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 22px;
+  border: 2px solid rgba(193, 30, 36, 0.45);
+  box-shadow: 0 0 12px rgba(193, 30, 36, 0.45);
+  animation: pulsarFinal 2s infinite ease-in-out;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes pulsarFinal {
+  0% { box-shadow: 0 0 0 0 rgba(193, 30, 36, 0.6); opacity: 0.9; }
+  70% { box-shadow: 0 0 0 15px rgba(193, 30, 36, 0); opacity: 0.6; }
+  100% { box-shadow: 0 0 0 0 rgba(193, 30, 36, 0); opacity: 0.9; }
+}
+
+.combo-card-v3.pulsar * {
+  position: relative;
+  z-index: 2;
+}
+/* ======= CORREÇÃO DO FUNDO BRANCO NOS COMBOS ======= */
+#pague-1-leve-2 .produtos .item a {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+main#lista .produtos .item a {
+  background: transparent;
+}
+/* ======== CARD FINAL DOS COMBOS (VERSÃO CORRIGIDA) ======== */
+.combo-card-v3 {
+  background: #fff; /* fundo branco */
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin: 0 auto 22px;
+  width: 94%;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  z-index: 2;
+}
+.item a {
+  overflow: visible !important;
+  position: relative;
+}
+.combo-card-v3 {
+  overflow: visible !important;
+}
+/* ===== TÍTULOS DAS SESSÕES (Combos, Hambúrgueres, etc) ===== */
+section h2,
+h2.titulo-sessao {
+  font-size: 2.8rem;         /* Aumenta significativamente o tamanho */
+  font-weight: 900;          /* Deixa mais encorpado e imponente */
+  color: #111;               /* Mantém contraste forte */
+  margin-bottom: 22px;       /* Espaço respirável abaixo */
+  letter-spacing: -0.8px;    /* Deixa mais compacto e elegante */
+  line-height: 1.1;          /* Ajusta a altura da linha */
+  text-transform: none;      /* Evita caixa alta, mantém o estilo natural */
+}
+
+/* Opcional: leve sombra para destaque sutil */
+section h2::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 4px;
+  background: linear-gradient(90deg, #FF4B4B, #FF8C42);
+  border-radius: 2px;
+  margin-top: 6px;
+}
+/* ===== AJUSTE DE TAMANHO DOS TÍTULOS DAS SESSÕES ===== */
+main#lista h2 {
+  font-size: 2.0rem !important; /* força a prioridade */
+  font-weight: 900 !important;  /* deixa encorpado e chamativo */
+  color: #111 !important;
+  text-transform: none;
+  letter-spacing: -0.8px;
+  margin: 20px 0 15px 10px;
+  line-height: 1.1;
+}
+
+/* opcional: subtítulo com destaque de barra colorida tipo iFood */
+main#lista h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: linear-gradient(90deg, #EA1D2C, #FF8C42);
+  border-radius: 2px;
+  margin-top: 6px;
+}
+/* === FOOTER ESTILO PREMIUM === */
+.footer {
+  background-color: #f4f5f7;
+  padding: 50px 20px 25px;
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+  text-align: center;
+  border-top: 1px solid #e3e3e3;
+}
+
+/* --- Parte superior com logo e texto --- */
+.footer-top {
+  margin-bottom: 35px;
+}
+
+.footer-logo {
+  width: 130px;
+  margin-bottom: 12px;
+}
+
+.footer-top p {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+/* --- Estrutura das colunas --- */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.footer-column {
+  text-align: left;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.footer-column p {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+/* --- Linha divisória entre blocos --- */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e1e1e1;
+  margin: 30px 0;
+}
+
+/* --- Seção de segurança --- */
+.footer-security {
+  margin-bottom: 20px;
+}
+
+.footer-security h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.security-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.security-logos img {
+  height: 30px;
+  object-fit: contain;
+}
+
+.footer-security p {
+  font-size: 13px;
+  color: #333;
+  margin: 4px 0;
+}
+
+/* --- Copyright --- */
+.footer-copy {
+  font-size: 13px;
+  color: #777;
+  margin-top: 15px;
+}
+
+/* --- Responsividade mobile --- */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+}
+/* === FOOTER NO ESTILO EL CHAPPO === */
+.footer {
+  background-color: #f9f9f9;
+  padding: 55px 20px 30px;
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* --- LOGO E TEXTO PRINCIPAL --- */
+.footer-top {
+  margin-bottom: 35px;
+}
+
+.footer-logo {
+  width: 125px;
+  margin-bottom: 14px;
+}
+
+.footer-top p {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0 auto 15px;
+}
+
+/* --- ÍCONES SOCIAIS --- */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-socials i {
+  font-size: 20px;
+  color: #333;
+  transition: 0.2s;
+}
+
+.footer-socials i:hover {
+  color: #e63946;
+}
+
+/* --- COLUNAS DE LINKS E HORÁRIOS --- */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-bottom: 35px;
+}
+
+.footer-column {
+  text-align: left;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.footer-column p {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+/* --- LINHA DIVISÓRIA --- */
+.footer-divider {
+  width: 90%;
+  height: 1px;
+  background-color: #e4e4e4;
+  margin: 35px auto;
+}
+
+/* --- SEÇÃO DE SEGURANÇA --- */
+.footer-security {
+  margin-bottom: 25px;
+}
+
+.footer-security h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 14px;
+}
+
+.security-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.security-logos img {
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0.95);
+}
+
+.footer-security p {
+  font-size: 13px;
+  color: #333;
+  margin: 5px 0;
+}
+
+/* --- COPYRIGHT --- */
+.footer-copy {
+  font-size: 13px;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-divider {
+    width: 100%;
+    margin: 25px 0;
+  }
+}
+/* Ajustes finos do footer */
+.footer {
+  margin-top: 60px; /* aumenta o espaço entre os cards e o rodapé */
+}
+
+.footer-logo {
+  width: 130px;
+  display: block;
+  margin: 0 auto 15px; /* centraliza a logo */
+}
+
+/* Ícones sociais */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.footer-socials i {
+  font-size: 22px;
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.footer-socials i:hover {
+  color: #e63946;
+}
+/* ===== RESPONSIVIDADE MOBILE ===== */
+@media (max-width: 768px) {
+  main#lista .produtos {
+    grid-template-columns: 1fr 1fr; /* 2 colunas no mobile */
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  main#lista .produtos {
+    grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+  }
+}
+.combo-card-v3 {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid #cecece;
+}
+
+.pulsar {
+  animation: pulsar 1.5s infinite;
+}
+
+@keyframes pulsar {
+  0% { box-shadow: 0 0 0 0 rgba(234, 29, 44, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(234, 29, 44, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(234, 29, 44, 0); }
+}
+.combo-imagem-v3 img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+@media (max-width: 480px) {
+  .combo-nome {
+    font-size: 16px;
+  }
+
+  .combo-descricao li {
+    font-size: 13px;
+  }
+
+  .combo-preco .preco-atual b {
+    font-size: 18px;
+  }
+
+  .combo-restante {
+    font-size: 12px;
+  }
+}
+
+/* ======================================================
+   ESTILO FINAL E CORRIGIDO DO BANNER (MOBILE & DESKTOP)
+   ====================================================== */
+
+.local-banner-container {
+  /* Layout e Centralização do Container */
+  display: block; /* Comportamento padrão de bloco */
+  width: 94%;
+  max-width: 980px;
+  margin: 25px auto; /* Centraliza o container na página */
+  
+  /* Estilo Visual */
+  background-color: #FFF2EB;
+  border-radius: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06), 0 4px 14px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+/* Garante que o texto de localização esteja sempre centralizado */
+.local-banner-container .local-text {
+  text-align: center;
+  padding: 10px 0 6px 0;
+}
+
+/* Controla a imagem DENTRO do banner */
+.local-banner-container .banner-entrega img {
+  width: 100%;      /* Faz a imagem ocupar toda a largura do container */
+  max-width: none;  /* Remove qualquer limite de largura que possa estar ativo */
+  height: auto;     /* Mantém a proporção correta da imagem */
+  display: block;   /* Remove espaços extras indesejados */
+}
+
+
+.barra-info-delivery .icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 4px;
+  fill: #000; /* garante visibilidade */
+}
+.barra-info-delivery .item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+/* =========================================
+   FIX FINAL - GRID + FLEX CONSERTADO
+   ========================================= */
+
+/* 🔹 Layout padrão MOBILE */
+section .produtos,
+section.hamburgueres,
+section.acompanhamentos,
+section.bebidas {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+/* 🔹 Tablet: 2 colunas */
+@media (min-width: 768px) {
+  section .produtos,
+  section.hamburgueres,
+  section.acompanhamentos,
+  section.bebidas {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* 🔹 Desktop: 3 colunas */
+@media (min-width: 1024px) {
+  section .produtos,
+  section.hamburgueres,
+  section.acompanhamentos,
+  section.bebidas {
+    grid-template-columns: repeat(3, 1fr) !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    gap: 20px !important;
+  }
+
+  /* 🔸 Corrige os links internos dos cards */
+  section .produtos .item a,
+  section.hamburgueres .item a,
+  section.acompanhamentos .item a,
+  section.bebidas .item a {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  /* 🔸 Ajusta as imagens */
+  section .produtos .item figure,
+  section.hamburgueres .item figure,
+  section.acompanhamentos .item figure,
+  section.bebidas .item figure {
+    width: 100% !important;
+    height: 180px !important;
+    overflow: hidden !important;
+    border-radius: 10px !important;
+  }
+
+  section .produtos .item .fotoProduto,
+  section.hamburgueres .item .fotoProduto,
+  section.acompanhamentos .item .fotoProduto,
+  section.bebidas .item .fotoProduto {
+    width: 100% !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+  }
+}
+
+/* 🔹 Corrige overflow do grid */
+section {
+  overflow: visible !important;
+}
+/* =========================================================
+   CSS UNIFICADO PARA CARDS DE PRODUTOS (MOBILE E DESKTOP)
+   ========================================================= */
+
+/* Estilo base do card (igual para todos os produtos) */
+#hamburgueres .item,
+#acompanhamentos .item,
+#bebidas .item {
+  background: #fff;
+  border: 1px solid #d4d4d4;
+  border-radius: 16px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+  width: 94%;
+  margin: 0 auto 18px; /* Centraliza o card */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .25s ease;
+}
+
+/* Remove a borda/fundo do link interno para evitar anéis brancos */
+#hamburgueres .item > a,
+#acompanhamentos .item > a,
+#bebidas .item > a {
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Efeito de hover */
+#hamburgueres .item:hover,
+#acompanhamentos .item:hover,
+#bebidas .item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.10);
+}
+
+/* Tablet: Layout em grid com 2 colunas */
+@media (min-width: 768px) {
+  #hamburgueres .produtos,
+  #acompanhamentos .produtos,
+  #bebidas .produtos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+/* Desktop: Layout em grid com 3 colunas e cards na vertical */
+@media (min-width: 1024px) {
+  #hamburgueres .produtos,
+  #acompanhamentos .produtos,
+  #bebidas .produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  /* Transforma o .item em um container vertical */
+  #hamburgueres .item,
+  #acompanhamentos .item,
+  #bebidas .item {
+    flex-direction: column;
+    padding: 12px;
+    width: 100%;
+    height: 100%; /* Garante que todos os cards na mesma linha tenham a mesma altura */
+  }
+  
+  /* Ajusta o link interno */
+  #hamburgueres .item > a,
+  #acompanhamentos .item > a,
+  #bebidas .item > a {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  /* Ajusta a imagem para o topo */
+  #hamburgueres .item .fotoProduto,
+  #acompanhamentos .item .fotoProduto,
+  #bebidas .item .fotoProduto {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #hamburgueres .item figure,
+  #acompanhamentos .item figure,
+  #bebidas .item figure {
+    width: 100% !important;
+    height: 180px !important;
+    border: 0 !important;
+  }
+}
+/* =========================================================
+   🔥 CORREÇÃO GLOBAL DE ALINHAMENTO E PROPORÇÃO DOS CARDS
+   ========================================================= */
+
+/* 1️⃣ - Centraliza todos os cards igualmente em todas as seções */
+main#lista .produtos {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 por linha no mobile */
+  justify-items: center; /* Centraliza horizontalmente o conteúdo */
+  gap: 16px; /* Espaço uniforme entre os cards */
+}
+
+/* 2️⃣ - Corrige largura e proporção dos cards */
+main#lista .produtos .item a {
+  width: 92%; /* Cria margens laterais iguais */
+  max-width: 420px; /* Mantém proporção elegante no desktop */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  border: 2px solid #cecece;
+  background: #fff;
+  padding: 12px 16px;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efeito de hover padronizado */
+main#lista .produtos .item a:hover {
+  transform: scale(1.01);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* 3️⃣ - Corrige espaçamento interno entre texto e imagem */
+main#lista .produtos .item .texto {
+  flex: 1;
+  padding-right: 10px;
+}
+
+main#lista .produtos .item .fotoProduto {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+}
+
+main#lista .produtos .item .fotoProduto figure {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* 4️⃣ - Ajuste automático no DESKTOP */
+@media (min-width: 1024px) {
+  main#lista .produtos {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    justify-items: center;
+  }
+
+  main#lista .produtos .item a {
+    width: 95%;
+    max-width: 360px;
+  }
+}
+/* =========================================================
+   POLIMENTO FINAL DESKTOP - BASEADO NA REFERÊNCIA
+   ========================================================= */
+
+/* Aplica estas regras apenas em telas de desktop (1024px ou mais) */
+@media (min-width: 1024px) {
+
+  /* 1. Transforma o card em um container flexível vertical */
+  main#lista .produtos .item {
+    display: flex;
+    flex-direction: column; /* Itens empilhados verticalmente */
+    justify-content: space-between; /* Espaça o conteúdo para o botão ficar no fundo */
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    padding: 12px;
+    height: 100%; /* Garante que todos os cards na mesma linha tenham a mesma altura */
+  }
+
+  /* 2. Remove estilos do link para não parecer um card duplicado */
+  main#lista .produtos .item a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* 3. Ajusta a imagem para o topo do card */
+  main#lista .produtos .item .fotoProduto {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  main#lista .produtos .item figure {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  main#lista .produtos .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 4. Ajusta a área de texto */
+  main#lista .produtos .item .texto {
+    padding-right: 0;
+  }
+
+  main#lista .produtos .item .texto h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  main#lista .produtos .item .texto span {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 4px 0 10px 0;
+  }
+
+  main#lista .produtos .item .texto .preco {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #077c22;
+  }
+  
+  /* 5. Estilo do novo botão "Adicionar" (Inspirado na referência) */
+  .btn-adicionar {
+    background-color: #EA1D2C; /* Vermelho principal do seu site */
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0; /* Padding vertical */
+    width: 100%;
+    cursor: pointer;
+    margin-top: 12px; /* Espaço entre o preço e o botão */
+    transition: background-color 0.2s ease;
+  }
+
+  .btn-adicionar:hover {
+    background-color: #c11a24; /* Um tom de vermelho mais escuro no hover */
+  }
+}
+
+/* =========================================
+   REFINAMENTO MOBILE - TÍTULOS DE SEÇÃO
+   ========================================= */
+
+/* Aplica apenas em telas menores que 768px */
+@media (max-width: 767px) {
+  main#lista h2 {
+    font-size: 1.7rem !important; /* Reduz o tamanho do título no mobile */
+    margin: 25px 0 15px 5px; /* Ajusta o espaçamento */
+  }
+}
+/* =========================================
+   REFINAMENTO MOBILE - CORREÇÃO DE BORDA DUPLA
+   ========================================= */
+
+/* Remove a borda e o fundo do link interno dos cards */
+main#lista .produtos .item a {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+/* =========================================
+   REDESIGN - POLIMENTO DOS CARDS DE COMBO
+   ========================================= */
+
+/* Ajusta o card principal */
+.combo-card-v3 {
+  border: 1px solid #e9e9e9;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+  transition: all 0.25s ease-in-out;
+}
+.combo-card-v3:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+
+/* Título do Combo */
+.combo-nome {
+  font-size: 1.3rem; /* Um pouco maior e mais impactante */
+  font-weight: 800;
+  color: #111;
+  margin: 12px 0 10px 0;
+}
+
+/* Descrição do Combo (itens) */
+.combo-descricao {
+  padding: 0 20px;
+  margin-bottom: 15px; /* Mais espaço antes do preço */
+}
+.combo-descricao li {
+  font-size: 0.95rem;
+  color: #555;
+  padding-left: 18px; /* Mais espaço para o bullet point */
+  margin-bottom: 5px;
+}
+.combo-descricao li::before {
+  font-size: 1.2rem; /* Bullet point maior */
+  top: -2px; /* Alinhamento vertical corrigido */
+}
+
+/* Seção de Preços */
+.combo-preco {
+  margin-bottom: 12px;
+}
+.combo-preco .preco-antigo {
+  font-size: 1rem;
+  color: #888;
+}
+.combo-preco .preco-atual b {
+  font-size: 1.3rem; /* Preço promocional em maior destaque */
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+/* Estoque restante */
+.combo-restante {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #c11a24;
+  background-color: #fff5f5; /* Fundo sutil para destacar a urgência */
+  padding: 5px 10px;
+  border-radius: 8px;
+  display: inline-block; /* Garante que o fundo se ajuste ao texto */
+  margin-bottom: 15px;
+}
+
+/* Imagem do Combo */
+.combo-imagem-v3 {
+  border-radius: 14px; /* Garante consistência nos cantos */
+}
+/* =========================================
+   NOVO POPUP DE LOCALIZAÇÃO - DESIGN 2025
+   ========================================= */
+
+.popup-local-container {
+  padding: 1.5rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.popup-header {
+  margin-bottom: 1.5rem;
+}
+
+.popup-header i {
+  font-size: 2.5rem;
+  color: #EA1D2C; /* Vermelho da marca */
+  margin-bottom: 0.75rem;
+}
+
+.popup-header h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #111;
+  margin: 0;
+}
+
+.popup-header p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.location-box {
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.location-box span {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.location-box strong {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 0.25rem;
+}
+
+.popup-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Aplica o estilo aos botões do SweetAlert */
+.swal2-styled.btn-confirmar {
+  background-color: #EA1D2C !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 0.9rem 1rem !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.swal2-styled.btn-confirmar:hover {
+  background-color: #c11a24 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.swal2-styled.btn-alterar {
+  background-color: transparent !important;
+  color: #333 !important;
+  border: 2px solid #ddd !important;
+  padding: 0.9rem 1rem !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.swal2-styled.btn-alterar:hover {
+  background-color: #f5f5f5 !important;
+  border-color: #ccc !important;
+}
+
+
+/* CSS Adicional para o Popup de Sucesso */
+
+.success-details {
+  display: flex;
+  gap: 1rem;
+  background-color: #f0fdf4; /* <-- Novo fundo verde bem clarinho */
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  flex: 1; /* Ocupa metade do espaço */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.detail-item i {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.detail-item span {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.detail-item strong {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;
+}
+/* =========================================================
+   RESTAURAÇÃO DO LAYOUT MOBILE PARA ACOMPANHAMENTOS E BEBIDAS
+   ========================================================= */
+
+/* Aplica o estilo de card horizontal apenas no mobile */
+@media (max-width: 1023px) {
+  #acompanhamentos .item,
+  #bebidas .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 94%;
+    margin: 0 auto 12px; /* Reduz a margem inferior para mobile */
+  }
+
+  #acompanhamentos .item > a,
+  #bebidas .item > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #acompanhamentos .item .texto,
+  #bebidas .item .texto {
+    flex: 1;
+    padding-right: 10px;
+  }
+
+  #acompanhamentos .item .fotoProduto,
+  #bebidas .item .fotoProduto {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0; /* Impede que a imagem encolha */
+  }
+
+  #acompanhamentos .item figure,
+  #bebidas .item figure {
+    width: 110px !important;
+    height: 110px !important;
+  }
+}
+/* =================================================================
+   CORREÇÃO FINAL - UNIFICA O ESTILO INTERNO DE TODOS OS CARDS
+   ================================================================= */
+
+/* Estilo para o TÍTULO do produto */
+#hamburgueres .item .texto h3,
+#acompanhamentos .item .texto h3,
+#bebidas .item .texto h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+/* Estilo para a DESCRIÇÃO do produto */
+#hamburgueres .item .texto span,
+#acompanhamentos .item .texto span,
+#bebidas .item .texto span {
+  display: block;
+  color: #6b6b6b; /* Cinza médio */
+  font-size: 0.93rem;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+/* Estilo para o PREÇO do produto */
+#hamburgueres .item .texto .preco,
+#acompanhamentos .item .texto .preco,
+#bebidas .item .texto .preco {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #009933; /* <-- A cor verde que estava faltando! */
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+/* ======================================================
+   POLIMENTO FASE 1 - CABEÇALHO FIXO (STICKY HEADER)
+   ====================================================== */
+
+header#topo {
+    position: sticky; /* A mágica acontece aqui! */
+    top: 0;           /* "Gruda" no topo da tela */
+    z-index: 1000;    /* Garante que ele fique acima de todo o resto */
+    width: 100%;
+}
+/* ======================================================
+   POLIMENTO FINAL PREMIUM - CARDS DA PÁGINA PRINCIPAL
+   ====================================================== */
+
+/* O card em si: sem borda visível, sombra suave e mais respiro */
+#hamburgueres .item,
+#acompanhamentos .item,
+#bebidas .item {
+    background-color: #fff;
+    border: 1px solid #f0f0f0; /* Borda quase invisível, só para dar forma */
+    border-radius: 20px;       /* Cantos mais arredondados */
+    padding: 20px;             /* Mais espaço interno ("respiro") */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06); /* Sombra suave e difusa */
+    transition: all 0.25s ease-in-out;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+#hamburgueres .item:hover,
+#acompanhamentos .item:hover,
+#bebidas .item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* A imagem: um pouco menor e com cantos mais arredondados */
+#hamburgueres .item figure, #acompanhamentos .item figure, #bebidas .item figure {
+    width: 115px !important;
+    height: 115px !important;
+    border-radius: 16px !important; /* Cantos da imagem mais suaves */
+}
+
+/* A tipografia: pesos, cores e espaçamentos exatos */
+#hamburgueres .item .texto h3, #acompanhamentos .item .texto h3, #bebidas .item .texto h3 {
+    font-size: 1.05rem;
+    font-weight: 800; /* Mais forte e impactante */
+    color: #111;       /* Preto puro */
+    margin-bottom: 6px;
+}
+
+#hamburgueres .item .texto span, #acompanhamentos .item .texto span, #bebidas .item .texto span {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #6b7280; /* Cinza mais claro para a descrição */
+    margin-bottom: 10px;
+}
+
+#hamburgueres .item .texto .preco, #acompanhamentos .item .texto .preco, #bebidas .item .texto .preco {
+    font-size: 1.1rem;
+    font-weight: 800;   /* Preço bem destacado */
+    color: #00A44B;     /* Verde mais vibrante */
+}
+/* ======================================================
+   POLIMENTO FINAL PREMIUM - LARGURA DOS CARDS (MOBILE)
+   ====================================================== */
+
+/* Aplica apenas em telas de celular e tablet, onde o ajuste é necessário */
+@media (max-width: 767px) {
+    
+    /* Diminui o espaçamento lateral do container principal */
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Ajusta o padding interno dos cards para manter a harmonia visual */
+    #hamburgueres .item,
+    #acompanhamentos .item,
+    #bebidas .item {
+        padding: 18px; 
+    }
+}
+
+/* =================================================================
+   CORREÇÃO FINAL E DEFINITIVA - BARRA DE INFORMAÇÕES
+   ================================================================= */
+
+/* Container (não precisa de mudança, mas mantemos por segurança) */
+body .barra-info-delivery {
+  padding: 16px 25px !important;
+}
+
+/* ⭐ AQUI ESTÁ A CORREÇÃO DAS FONTES E CORES SÓLIDAS ⭐ */
+body .barra-info-delivery .item {
+  font-weight: 500 !important; /* Um peso de fonte nem tão fino, nem tão grosso */
+  color: #6B7280 !important;   /* Cor cinza sólida e legível para o texto secundário */
+}
+
+/* ⭐ E AQUI A DOS ÍCONES SÓLIDOS ⭐ */
+body .barra-info-delivery .icon {
+  fill: currentColor !important; /* PREENCHE o ícone com a cor do texto */
+  stroke: none !important;      /* Remove qualquer contorno */
+}
+
+/* Deixa o texto em negrito (distância e tempo) com a cor mais escura e sólida */
+body .barra-info-delivery b {
+  font-weight: 700 !important; /* Peso mais forte para o destaque */
+  color: #374151 !important;   /* Cinza escuro sólido e premium */
+}
+
+/* Mantém as outras regras de estilo para o "Aberto" */
+body .barra-info-delivery .ponto-verde {
+  background-color: #22c55e !important;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.7) !important;
+}
+
+body .barra-info-delivery .status span {
+  color: #22c55e !important;
+  font-weight: 700 !important;
+}
+
+body .barra-info-delivery .divisor {
+  color: #e5e7eb !important;
+}
+/* =================================================================
+   AJUSTE FINAL - ESTILO DO ÍCONE DA MOTO (FONT AWESOME)
+   ================================================================= */
+
+/* Ajusta o tamanho e a cor do novo ícone da moto */
+body .barra-info-delivery i.icon {
+  font-size: 20px; /* Tamanho do ícone */
+  color: currentColor; /* Pega a cor do texto pai, garantindo a harmonia */
+  /* Remove regras de SVG que não se aplicam */
+  stroke: none !important;
+  fill: none !important;
+}
+
+/* Garante que o ícone de pino (que é SVG) continue funcionando */
+body .barra-info-delivery svg.icon {
+  fill: currentColor !important;
+}
+/* =================================================================
+   POLIMENTO FINAL - ALINHAMENTO PRECISO DOS ÍCONES
+   ================================================================= */
+
+/* Alvo: Ícone de pino (SVG) e ícone da moto (Font Awesome) */
+body .barra-info-delivery svg.icon,
+body .barra-info-delivery i.icon {
+    font-size: 18px !important;   /* Reduz o tamanho da moto */
+    width: 18px !important;       /* Reduz a largura do pino */
+    height: 18px !important;      /* Reduz a altura do pino */
+    vertical-align: middle !important; /* Força o alinhamento vertical com o texto */
+    transform: translateY(-1px); /* O toque de mestre: um ajuste fino de 1 pixel para cima */
+}
+/* =================================================================
+   POLIMENTO FINAL FASE 1 - HIERARQUIA DE TÍTULOS DOS CARDS
+   ================================================================= */
+
+/* Alvo: Título dos cards de Hambúrgueres, Acompanhamentos e Bebidas */
+#hamburgueres .item .texto h3,
+#acompanhamentos .item .texto h3,
+#bebidas .item .texto h3 {
+    color: #374151 !important; /* Um cinza-chumbo escuro e elegante */
+}
+
+/* Alvo: Título dos cards de Combo */
+.combo-nome {
+    color: #374151 !important; /* Aplica a mesma cor para consistência */
+}
+/* 🔄 Unificação de fonte - corrigindo discrepância visual */
+button,
+input,
+textarea,
+select {
+    font-family: "Nunito Sans", sans-serif !important;
+}
+/* =================================================================
+   ESTILO PADRÃO PARA CARDS (COMBINADOS, yakisobas, BEBIDAS) - CORRIGIDO
+   ================================================================= */
+
+/* Aplica o estilo de card ao container .item nessas seções */
+#combinados .item,
+#yakisobas .item,
+#bebidas .item {
+  background: #fff; /* Fundo branco */
+  border: 1px solid #dcdcdc; /* Borda cinza bem sutil */
+  border-radius: 16px; /* Cantos arredondados */
+  padding: 12px 16px; /* Espaço interno */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07); /* Sombra suave */
+  width: 94%; /* Largura ajustada para 'flutuar' */
+  margin: 0 auto 16px; /* Centraliza e adiciona espaço abaixo */
+  overflow: hidden; /* Garante que nada vaze */
+  display: flex; /* Mantém o item como flex container */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between; /* Espaça conteúdo interno */
+  transition: all .25s ease;
+}
+
+/* Remove a borda/fundo do link interno para evitar anéis/bordas duplas */
+#combinados .item > a,
+#yakisobas .item > a,
+#bebidas .item > a {
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  display: flex; /* Mantém o layout flex do conteúdo (texto + imagem) */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: none; /* Garante que não haja sublinhado */
+  color: inherit; /* Herda a cor do texto do container */
+}
+
+/* Efeito de hover no card (.item) */
+#combinados .item:hover,
+#yakisobas .item:hover,
+#bebidas .item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.09);
+}
+
+/* --- Estilos internos (Texto e Imagem) --- */
+
+/* Ajuste fino no texto para não encostar na imagem */
+#combinados .item .texto,
+#yakisobas .item .texto,
+#bebidas .item .texto {
+   flex: 1; /* Permite que o texto ocupe o espaço disponível */
+   margin-right: 10px; /* Adiciona espaço entre texto e imagem */
+}
+
+/* Estilo para o TÍTULO do produto (Garante consistência) */
+#combinados .item .texto h3,
+#yakisobas .item .texto h3,
+#bebidas .item .texto h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+  font-family: "Poppins", "Segoe UI", sans-serif; /* Mantém a fonte */
+}
+
+/* Estilo para a DESCRIÇÃO do produto (Garante consistência) */
+#combinados .item .texto span,
+#yakisobas .item .texto span,
+#bebidas .item .texto span {
+  display: block;
+  color: #6b6b6b;
+  font-size: 0.93rem;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+/* Estilo para o PREÇO do produto (Garante consistência) */
+#combinados .item .texto .preco,
+#yakisobas .item .texto .preco,
+#bebidas .item .texto .preco {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #009933; /* Verde */
+  font-family: "Poppins", "Segoe UI", sans-serif; /* Mantém a fonte */
+}
+
+/* Ajuste da área da imagem */
+#combinados .item .fotoProduto,
+#yakisobas .item .fotoProduto,
+#bebidas .item .fotoProduto {
+    width: 100px; /* Largura fixa para a imagem */
+    height: 100px; /* Altura fixa para a imagem */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+#combinados .item figure,
+#yakisobas .item figure,
+#bebidas .item figure {
+  border: 0 !important; /* Remove borda da tag figure se houver */
+  width: 100px;
+  height: 100px;
+  border-radius: 12px; /* Cantos arredondados na imagem */
+  overflow: hidden; /* Garante que a imagem respeite os cantos */
+  margin: 0; /* Remove margem padrão da figure */
+}
+
+/* Ajuste da imagem para preencher a figure */
+#combinados .item .fotoProduto img,
+#yakisobas .item .fotoProduto img,
+#bebidas .item .fotoProduto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra a área */
+}
+
+
+/* --- Correção para Layout Desktop (Mantém Vertical) --- */
+@media (min-width: 1024px) {
+  /* Mantém o grid desktop */
+  #combinados .produtos,
+  #yakisobas .produtos,
+  #bebidas .produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Transforma o .item em vertical no desktop */
+  #combinados .item,
+  #yakisobas .item,
+  #bebidas .item {
+    flex-direction: column; /* Volta a ser vertical */
+    padding: 12px;
+    width: 100%; /* Ocupa a coluna do grid */
+    height: 100%; /* Para alinhar altura na linha */
+  }
+
+  /* Link interno também vertical */
+  #combinados .item > a,
+  #yakisobas .item > a,
+  #bebidas .item > a {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  /* Área da imagem no topo */
+  #combinados .item .fotoProduto,
+  #yakisobas .item .fotoProduto,
+  #bebidas .item .fotoProduto {
+    width: 100%; /* Ocupa toda a largura do card */
+    height: 180px; /* Altura padrão desktop */
+    margin-bottom: 10px;
+  }
+
+   #combinados .item figure,
+   #yakisobas .item figure,
+   #bebidas .item figure {
+     width: 100% !important;
+     height: 100% !important; /* Figure ocupa toda a área da fotoProduto */
+     border-radius: 8px !important; /* Raio menor para desktop */
+   }
+
+   /* Texto abaixo da imagem */
+   #combinados .item .texto,
+   #yakisobas .item .texto,
+   #bebidas .item .texto {
+      margin-right: 0; /* Remove margem direita no desktop */
+      width: 100%; /* Garante que o texto ocupe a largura */
+   }
+}
+/* =================================================================
+   ESTILOS DA SEÇÃO DE AVALIAÇÕES (JAPA SUSHI PREMIUM)
+   ================================================================= */
+
+/* Card de Resumo no Topo */
+.review-summary-card {
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+}
+
+.review-summary-card .summary-score {
+  text-align: left;
+}
+
+.review-summary-card .score-number {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111;
+  line-height: 1;
+}
+
+.review-summary-card .summary-stars {
+  font-size: 1rem;
+  color: #6A1B9A; /* Cor principal Fontana di Trevi */
+}
+
+.review-summary-card .summary-total {
+  text-align: right;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.review-summary-card .summary-total strong {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+  display: block;
+}
+
+.review-summary-card .summary-total span {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+
+/* Grid da Lista de Avaliações */
+.review-list {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 coluna no mobile */
+  gap: 16px;
+  width: 94%;
+  margin: 0 auto;
+}
+
+/* Card de Avaliação Individual */
+.review-card {
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Garante altura igual no grid */
+}
+
+.review-card .review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.review-card .review-user-icon {
+  font-size: 36px;
+  color: #e0e0e0; /* Ícone cinza claro */
+}
+
+.review-card .review-user-info {
+  margin-left: 12px;
+}
+
+.review-card .review-user-info h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 4px 0;
+}
+
+.review-card .review-stars {
+  font-size: 0.9rem;
+  color: #6A1B9A; /* Cor principal Fontana di Trevi */
+}
+
+.review-card .review-body {
+  font-family: "Nunito Sans", sans-serif;
+  flex-grow: 1; /* Faz o corpo esticar e empurra o footer para baixo */
+}
+
+.review-card .review-body p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #403f3f; /* Cor do corpo de texto principal */
+  margin: 0;
+}
+
+.review-card .review-footer {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f5f5f5;
+}
+
+/* --- Responsividade --- */
+
+/* 2 Colunas para Tablet e Desktop */
+@media (min-width: 768px) {
+  .review-list {
+    grid-template-columns: 1fr 1fr; /* 2 colunas */
+    gap: 20px;
+    max-width: 1200px;
+  }
+}
+/* =================================================================
+   CORREÇÃO - TAMANHO DO TÍTULO DA SEÇÃO DE AVALIAÇÕES
+   ================================================================= */
+
+#avaliacoes h2 {
+  font-size: 2.0rem !important; /* Reduz o título gigante para o mesmo tamanho dos outros */
+  font-weight: 900 !important;
+  color: #111 !important;
+  text-transform: none;
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+  margin: 20px 0 15px 10px; /* Usa a mesma margem dos outros títulos de seção */
+}
+
+/* Aplica a "barrinha" de destaque, igual aos outros títulos */
+#avaliacoes h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: linear-gradient(90deg, #6A1B9A, #ff8c42); /* Roxo Fontana di Trevi */
+  border-radius: 2px;
+  margin-top: 6px;
+}
+/* =================================================================
+   INCREMENTO PREMIUM - ÍCONES DE USUÁRIO COLORIDOS
+   ================================================================= */
+
+/* Define cores diferentes para os ícones de usuário */
+.review-list .review-card:nth-of-type(6n+1) .review-user-icon {
+  color: #a0aec0; /* Cinza */
+}
+.review-list .review-card:nth-of-type(6n+2) .review-user-icon {
+  color: #f56565; /* Vermelho claro */
+}
+.review-list .review-card:nth-of-type(6n+3) .review-user-icon {
+  color: #48bb78; /* Verde */
+}
+.review-list .review-card:nth-of-type(6n+4) .review-user-icon {
+  color: #4299e1; /* Azul */
+}
+.review-list .review-card:nth-of-type(6n+5) .review-user-icon {
+  color: #ed8936; /* Laranja */
+}
+.review-list .review-card:nth-of-type(6n+6) .review-user-icon {
+  color: #9f7aea; /* Roxo */
+}
+/* =================================================================
+   ESTILO DO BLOCO DE AVALIAÇÃO "BLOQUEADO" (CTA)
+   ================================================================= */
+
+.review-locked-container {
+  position: relative; /* Essencial para o overlay funcionar */
+  width: 94%;
+  max-width: 1200px;
+  margin: 24px auto 0; /* Espaço acima */
+  border: 2px dashed #dcdcdc; /* Borda tracejada p/ indicar 'incompleto' */
+  border-radius: 16px;
+  background: #f9f9f9; /* Fundo de input desabilitado */
+  padding: 24px;
+  min-height: 100px;
+  box-sizing: border-box;
+  overflow: hidden; /* Garante que o overlay respeite a borda */
+  display: flex;
+  align-items: center;
+}
+
+/* O texto cinza "fantasma" que fica atrás */
+.review-locked-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ccc;
+  font-style: italic;
+  font-size: 1.1rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* O overlay (camada de bloqueio) que fica por cima */
+.review-locked-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* Fundo branco semitransparente para dar o efeito "bloqueado" */
+  background: rgba(255, 255, 255, 0.9); 
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 16px;
+}
+
+.review-locked-overlay i {
+  font-size: 1.5rem;
+  color: #6A1B9A; /* Cor principal Fontana di Trevi */
+  margin-bottom: 10px;
+}
+
+.review-locked-overlay strong {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111;
+}
+/* =====================================================
+   ESTILOS DO POPUP - AÇÃO DE NATAL JAPA SUSHI
+   ===================================================== */
+
+/* Fundo com leve blur e suavidade */
+.popup-backdrop-japa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease-in-out;
+}
+
+/* Card central */
+.popup-modal-japa {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f9f9f9);
+  border-radius: 20px;
+  padding: 28px 30px;
+  width: 90%;
+  max-width: 480px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  transform: scale(0.95);
+  transition: transform 0.35s ease-in-out;
+  font-family: "Nunito Sans", sans-serif;
+  color: #403f3f;
+}
+
+/* Botão Fechar (X) */
+.popup-close-btn-japa {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #f3f3f3;
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
+  color: #888;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.popup-close-btn-japa:hover {
+  background: #e0e0e0;
+  color: #111;
+}
+
+/* Cabeçalho */
+.popup-header-japa {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.popup-logo-japa {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  border: 2px solid #6A1B9A;
+}
+.popup-header-japa h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #6A1B9A;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+/* Corpo */
+.popup-content-japa p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.popup-content-japa p.emphasis {
+  background: #fff3f3;
+  border-left: 4px solid #6A1B9A;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin: 18px 0;
+  color: #6A1B9A;
+  font-weight: 700;
+  text-align: center;
+  font-style: italic;
+}
+.popup-content-japa strong {
+  font-weight: 700;
+  color: #111;
+}
+.popup-content-japa .popup-note {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #666;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Botão CTA */
+.popup-footer-japa {
+  margin-top: 24px;
+}
+.popup-cta-btn-japa {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(90deg, #6A1B9A 0%, #FF2A2A 100%); /* Gradiente Fontana di Trevi */
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(185, 0, 0, 0.35);
+}
+.popup-cta-btn-japa:hover {
+  background: linear-gradient(90deg, #9A0000 0%, #E60000 100%);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Controle JS */
+.popup-japa-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.popup-japa-visible .popup-modal-japa {
+  transform: scale(1);
+}
+/* ============================================================
+   🔧 AJUSTES RESPONSIVOS PARA POPUPS (JAPA SUSHI / EL FUEGO)
+   ============================================================ */
+
+/* Garante que o popup se adapte a qualquer tamanho de tela */
+.popup-modal-japa,
+.popup-modal-fuego {
+  max-height: 90vh;              /* limita a altura à tela visível */
+  overflow-y: auto;              /* permite rolar dentro do modal se necessário */
+  padding: 22px 20px;            /* reduz padding para caber melhor em telas menores */
+  border-radius: 16px;
+}
+
+/* Scroll interno discreto e elegante */
+.popup-modal-japa::-webkit-scrollbar,
+.popup-modal-fuego::-webkit-scrollbar {
+  width: 6px;
+}
+.popup-modal-japa::-webkit-scrollbar-thumb,
+.popup-modal-fuego::-webkit-scrollbar-thumb {
+  background-color: rgba(185, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* Safe area em iPhones (evita que o botão grude nas bordas curvas) */
+.popup-modal-japa,
+.popup-modal-fuego {
+  padding-bottom: calc(22px + env(safe-area-inset-bottom));
+}
+
+/* Ajustes extras para telas muito pequenas (menos de 400px) */
+@media (max-width: 400px) {
+  .popup-modal-japa,
+  .popup-modal-fuego {
+    max-width: 95%;
+    max-height: 88vh;
+    padding: 18px 16px;
+    border-radius: 14px;
+  }
+
+  .popup-header-japa h3,
+  .popup-header-fuego h3 {
+    font-size: 1.35rem;
+  }
+
+  .popup-content-japa p,
+  .popup-content-fuego p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .popup-cta-btn-japa,
+  .popup-cta-btn-fuego {
+    font-size: 1rem;
+    padding: 12px 16px;
+  }
+}
